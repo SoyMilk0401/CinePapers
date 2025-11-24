@@ -1,0 +1,1486 @@
+
+
+<div class="wrap">
+    <header class="layer-header">
+        <h3 class="tit">굿즈 소진현황</h3>
+    </header>
+    <!-- layer-con -->
+    <div class="layer-con">
+        <!-- layer-goods-theater -->
+        <div class="layerGoodstheater">
+            <div class="tit">&lt;국보&gt; 오리지널 티켓</div>
+            <div class="txt">*선착순 증정으로 현장상황과 다를 수 있습니다.</div>
+            <div class="area">
+                <ul>
+                    
+                        
+                            
+                                <li class="area-cont on" id="10">
+                            
+                            
+                        
+                            <button onclick="fn_brchShow(10)" data-no="10" class="btn">서울 (17)</button>
+                            <div class="cont">
+                                <ul class="sect">
+                                    
+                                    
+                                        
+                                            <li id="1372" class="brch" brchCd="1372"><a>강남</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1341" class="brch" brchCd="1341"><a>강동</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0090" class="brch" brchCd="0090"><a>구의이스트폴</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1431" class="brch" brchCd="1431"><a>군자</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0041" class="brch" brchCd="0041"><a>더부티크목동현대백화점</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0073" class="brch" brchCd="0073"><a>동대문</a>
+                                                
+                                                    
+                                                        
+                                                        <span class="act">소량보유</span>
+                                                        
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1572" class="brch" brchCd="1572"><a>마곡</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1581" class="brch" brchCd="1581"><a>목동</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1311" class="brch" brchCd="1311"><a>상봉</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1211" class="brch" brchCd="1211"><a>상암월드컵경기장</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1371" class="brch" brchCd="1371"><a>센트럴</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1202" class="brch" brchCd="1202"><a>신촌</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1561" class="brch" brchCd="1561"><a>이수</a>
+                                                
+                                                    
+                                                        
+                                                        <span class="act">소량보유</span>
+                                                        
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1321" class="brch" brchCd="1321"><a>창동</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1351" class="brch" brchCd="1351"><a>코엑스</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="1212" class="brch" brchCd="1212"><a>홍대</a>
+                                                
+                                                    
+                                                        
+                                                        <span class="act">소량보유</span>
+                                                        
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0083" class="brch" brchCd="0083"><a>화곡</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                        
+                            
+                            
+                                <li class="area-cont" id="30">
+                            
+                        
+                            <button onclick="fn_brchShow(30)" data-no="30" class="btn">경기 (30)</button>
+                            <div class="cont">
+                                <ul class="sect">
+                                    
+                                    
+                                        
+                                            <li id="4121" class="brch" brchCd="4121"><a>고양스타필드</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0029" class="brch" brchCd="0029"><a>광명AK플라자</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0053" class="brch" brchCd="0053"><a>광명소하</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0035" class="brch" brchCd="0035"><a>금정AK플라자</a>
+                                                
+                                                    
+                                                        
+                                                        <span class="act">소량보유</span>
+                                                        
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4152" class="brch" brchCd="4152"><a>김포한강신도시</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0039" class="brch" brchCd="0039"><a>남양주</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0019" class="brch" brchCd="0019"><a>남양주현대아울렛스페이스원</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4451" class="brch" brchCd="4451"><a>동탄</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0089" class="brch" brchCd="0089"><a>동탄역</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0084" class="brch" brchCd="0084"><a>미사강변&#40;하남종합운동장&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4104" class="brch" brchCd="4104"><a>백석벨라시타</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4722" class="brch" brchCd="4722"><a>별내</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4221" class="brch" brchCd="4221"><a>부천스타필드시티</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4631" class="brch" brchCd="4631"><a>분당</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0086" class="brch" brchCd="0086"><a>성남모란</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0051" class="brch" brchCd="0051"><a>수원</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0052" class="brch" brchCd="0052"><a>수원AK플라자&#40;수원역&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0062" class="brch" brchCd="0062"><a>수원스타필드</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0060" class="brch" brchCd="0060"><a>수원인계</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4291" class="brch" brchCd="4291"><a>시흥배곧</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0088" class="brch" brchCd="0088"><a>시흥정왕</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4253" class="brch" brchCd="4253"><a>안산중앙</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0020" class="brch" brchCd="0020"><a>안성스타필드</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4462" class="brch" brchCd="4462"><a>용인테크노밸리</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0070" class="brch" brchCd="0070"><a>의정부민락</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4112" class="brch" brchCd="4112"><a>킨텍스</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4132" class="brch" brchCd="4132"><a>파주금촌</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4115" class="brch" brchCd="4115"><a>파주운정</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0064" class="brch" brchCd="0064"><a>평택비전</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4651" class="brch" brchCd="4651"><a>하남스타필드</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                        
+                            
+                            
+                                <li class="area-cont" id="35">
+                            
+                        
+                            <button onclick="fn_brchShow(35)" data-no="35" class="btn">인천 (6)</button>
+                            <div class="cont">
+                                <ul class="sect">
+                                    
+                                    
+                                        
+                                            <li id="4041" class="brch" brchCd="4041"><a>검단</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4062" class="brch" brchCd="4062"><a>송도&#40;트리플스트리트&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4001" class="brch" brchCd="4001"><a>영종</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0080" class="brch" brchCd="0080"><a>영종하늘도시</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="4051" class="brch" brchCd="4051"><a>인천논현</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0085" class="brch" brchCd="0085"><a>인천학익&#40;시티오씨엘&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                        
+                            
+                            
+                                <li class="area-cont" id="45">
+                            
+                        
+                            <button onclick="fn_brchShow(45)" data-no="45" class="btn">대전/충청/세종 (17)</button>
+                            <div class="cont">
+                                <ul class="sect">
+                                    
+                                    
+                                        
+                                            <li id="3141" class="brch" brchCd="3141"><a>공주</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0018" class="brch" brchCd="0018"><a>논산</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="3021" class="brch" brchCd="3021"><a>대전</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0028" class="brch" brchCd="0028"><a>대전신세계아트앤사이언스</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0009" class="brch" brchCd="0009"><a>대전유성</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="3011" class="brch" brchCd="3011"><a>대전중앙로</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0017" class="brch" brchCd="0017"><a>대전현대아울렛</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="3391" class="brch" brchCd="3391"><a>세종&#40;조치원&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="3392" class="brch" brchCd="3392"><a>세종나성</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="3631" class="brch" brchCd="3631"><a>오창</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="3651" class="brch" brchCd="3651"><a>진천</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0056" class="brch" brchCd="0056"><a>천안</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0049" class="brch" brchCd="0049"><a>청주사창</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0069" class="brch" brchCd="0069"><a>청주성안길</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0094" class="brch" brchCd="0094"><a>청주터미널</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0068" class="brch" brchCd="0068"><a>충주연수</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="3501" class="brch" brchCd="3501"><a>홍성내포</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                        
+                            
+                            
+                                <li class="area-cont" id="55">
+                            
+                        
+                            <button onclick="fn_brchShow(55)" data-no="55" class="btn">부산/대구/경상 (22)</button>
+                            <div class="cont">
+                                <ul class="sect">
+                                    
+                                    
+                                        
+                                            <li id="7122" class="brch" brchCd="7122"><a>경산하양</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="7303" class="brch" brchCd="7303"><a>구미강동</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0074" class="brch" brchCd="0074"><a>남포항</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0067" class="brch" brchCd="0067"><a>대구세븐밸리&#40;칠곡&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="7011" class="brch" brchCd="7011"><a>대구신세계&#40;동대구&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0022" class="brch" brchCd="0022"><a>대구이시아</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0072" class="brch" brchCd="0072"><a>대구프리미엄만경관</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="6161" class="brch" brchCd="6161"><a>덕천</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0076" class="brch" brchCd="0076"><a>마산&#40;경남대&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="6001" class="brch" brchCd="6001"><a>부산극장</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0061" class="brch" brchCd="0061"><a>부산대</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0032" class="brch" brchCd="0032"><a>사상</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0082" class="brch" brchCd="0082"><a>서면대한</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0063" class="brch" brchCd="0063"><a>양산</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="6262" class="brch" brchCd="6262"><a>양산증산</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0057" class="brch" brchCd="0057"><a>울산</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0045" class="brch" brchCd="0045"><a>진주&#40;중안&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0048" class="brch" brchCd="0048"><a>창원</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0014" class="brch" brchCd="0014"><a>창원내서</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0038" class="brch" brchCd="0038"><a>포항</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0079" class="brch" brchCd="0079"><a>해운대&#40;장산&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0087" class="brch" brchCd="0087"><a>화명</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                        
+                            
+                            
+                                <li class="area-cont" id="65">
+                            
+                        
+                            <button onclick="fn_brchShow(65)" data-no="65" class="btn">광주/전라 (7)</button>
+                            <div class="cont">
+                                <ul class="sect">
+                                    
+                                    
+                                        
+                                            <li id="5021" class="brch" brchCd="5021"><a>광주상무</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="5061" class="brch" brchCd="5061"><a>광주하남</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="5401" class="brch" brchCd="5401"><a>순천</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0010" class="brch" brchCd="0010"><a>전대&#40;광주&#41;</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0050" class="brch" brchCd="0050"><a>전주객사</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0021" class="brch" brchCd="0021"><a>전주혁신</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="5064" class="brch" brchCd="5064"><a>첨단</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                        
+                            
+                            
+                                <li class="area-cont" id="70">
+                            
+                        
+                            <button onclick="fn_brchShow(70)" data-no="70" class="btn">강원 (3)</button>
+                            <div class="cont">
+                                <ul class="sect">
+                                    
+                                    
+                                        
+                                            <li id="2001" class="brch" brchCd="2001"><a>남춘천</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="2202" class="brch" brchCd="2202"><a>원주혁신</a>
+                                                
+                                                    
+                                                        
+                                                        <span class="act">소량보유</span>
+                                                        
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li id="0037" class="brch" brchCd="0037"><a>춘천석사</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                        
+                            
+                            
+                                <li class="area-cont" id="80">
+                            
+                        
+                            <button onclick="fn_brchShow(80)" data-no="80" class="btn">제주 (1)</button>
+                            <div class="cont">
+                                <ul class="sect">
+                                    
+                                    
+                                        
+                                            <li id="0066" class="brch" brchCd="0066"><a>제주아라</a>
+                                                
+                                                    
+                                                        
+                                                        
+                                                        <span class="act">보유</span>
+                                                        
+                                                    
+                                                
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn-modal-close">레이어 닫기</button>
+</div>
+<script>
+    function fn_brchShow(areaCd){
+        $(".area-cont").removeClass("on");
+        $("#" + areaCd).addClass("on");
+    }
+</script>

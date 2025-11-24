@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Text.Json;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CinePapers.Models.Mega
@@ -14,6 +14,7 @@ namespace CinePapers.Models.Mega
     {
         private readonly HttpClient _client;
         private const string ListUrl = "https://www.megabox.co.kr/on/oh/ohe/Event/eventMngDiv.do";
+        private const string StockUrl = "https://www.megabox.co.kr/on/oh/ohe/Event/selectGoodsStockPrco.do";
 
         public string CinemaName => "메가박스";
 
@@ -31,6 +32,7 @@ namespace CinePapers.Models.Mega
             {
                 { "메가Pick", "CED03" },
                 { "영화", "CED01" },
+                { "극장", "CED04" },
                 { "시사회/무대인사", "CED02" },
                 { "제휴/할인", "CED05" }
             };
@@ -38,17 +40,17 @@ namespace CinePapers.Models.Mega
 
         public async Task<List<CinemaEventItem>> GetEventsListAsync(string categoryCode, int pageNo, string searchText = "")
         {
-            // 메가박스 요청 파라미터
+            // (기존 코드 동일)
             var requestData = new
             {
                 currentPage = pageNo.ToString(),
                 eventDivCd = categoryCode,
                 eventStatCd = "ONG",
                 recordCountPerPage = "10",
-                eventTitle = searchText // 검색어
+                eventTitle = searchText
             };
 
-            string jsonContent = JsonSerializer.Serialize(requestData);
+            string jsonContent = System.Text.Json.JsonSerializer.Serialize(requestData);
             var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
             try
@@ -67,19 +69,14 @@ namespace CinePapers.Models.Mega
                     foreach (var node in nodes)
                     {
                         var item = new CinemaEventItem();
-
-                        // HTML 속성에서 ID 추출
                         item.EventId = node.GetAttributeValue("data-no", "");
 
-                        // 제목 추출
                         var titNode = node.SelectSingleNode(".//p[@class='tit']");
                         if (titNode != null) item.Title = titNode.InnerText.Trim();
 
-                        // 이미지 추출
                         var imgNode = node.SelectSingleNode(".//p[@class='img']//img");
                         if (imgNode != null) item.ImageUrl = imgNode.GetAttributeValue("src", "");
 
-                        // 기간 추출
                         var dateNode = node.SelectSingleNode(".//p[@class='date']");
                         if (dateNode != null) item.DatePeriod = dateNode.InnerText.Trim();
 
@@ -96,6 +93,7 @@ namespace CinePapers.Models.Mega
 
         public async Task<CinemaEventDetail> GetEventDetailAsync(string eventId)
         {
+            // (기존 코드 동일)
             string url = $"https://www.megabox.co.kr/event/detail?eventNo={eventId}";
             try
             {
@@ -111,7 +109,6 @@ namespace CinePapers.Models.Mega
                 var dateNode = doc.DocumentNode.SelectSingleNode("//p[@class='event-detail-date']/em");
                 if (dateNode != null) detail.DatePeriod = dateNode.InnerText.Trim();
 
-                // 이미지 추출 (메가박스는 이미지가 여러 장일 수 있음)
                 var imgNodes = doc.DocumentNode.SelectNodes("//div[@class='event-html']//img");
                 if (imgNodes != null)
                 {
@@ -126,14 +123,126 @@ namespace CinePapers.Models.Mega
                         }
                     }
                 }
+
+                var stockBtn = doc.DocumentNode.SelectSingleNode("//button[@id='btnSelectGoodsStock']");
+                if (stockBtn != null)
+                {
+                    string goodsNo = stockBtn.GetAttributeValue("data-pn", "");
+                    if (!string.IsNullOrEmpty(goodsNo))
+                    {
+                        detail.OriginalGiftId = goodsNo;
+                        detail.HasStockCheck = true;
+                    }
+                }
+
                 return detail;
             }
             catch { return null; }
         }
 
-        public Task<List<CinemaStockItem>> GetGiftStockAsync(string eventId, string giftId)
+        // [수정됨] 굿즈 재고 조회 구현 (상태값 매핑 적용)
+        public async Task<List<CinemaStockItem>> GetGiftStockAsync(string eventId, string giftId)
         {
-            return Task.FromResult(new List<CinemaStockItem>());
+            var parameters = new Dictionary<string, string>
+            {
+                { "eventNo", eventId },
+                { "goodsNo", giftId }
+            };
+
+            var request = new HttpRequestMessage(HttpMethod.Post, StockUrl)
+            {
+                Content = new FormUrlEncodedContent(parameters)
+            };
+            request.Headers.Referrer = new Uri($"https://www.megabox.co.kr/event/detail?eventNo={eventId}");
+
+            try
+            {
+                var response = await _client.SendAsync(request);
+                string html = await response.Content.ReadAsStringAsync();
+
+                var doc = new HtmlDocument();
+                doc.LoadHtml(html);
+
+                var stockList = new List<CinemaStockItem>();
+
+                var areaNodes = doc.DocumentNode.SelectNodes("//li[contains(@class, 'area-cont')]");
+                if (areaNodes == null) return stockList;
+
+                int sortOrder = 0;
+                foreach (var areaNode in areaNodes)
+                {
+                    string region = "기타";
+                    var btnNode = areaNode.SelectSingleNode(".//button[contains(@class, 'btn')]");
+                    if (btnNode != null)
+                    {
+                        string text = btnNode.InnerText.Trim();
+                        int idx = text.IndexOf('(');
+                        region = idx > 0 ? text.Substring(0, idx).Trim() : text;
+                    }
+
+                    var cinemaNodes = areaNode.SelectNodes(".//li[contains(@class, 'brch')]");
+                    if (cinemaNodes != null)
+                    {
+                        foreach (var cinemaNode in cinemaNodes)
+                        {
+                            var item = new CinemaStockItem
+                            {
+                                Region = region,
+                                SortOrder = ++sortOrder
+                            };
+
+                            var linkNode = cinemaNode.SelectSingleNode(".//a");
+                            if (linkNode != null) item.CinemaName = linkNode.InnerText.Trim();
+
+                            // [상태값 파싱 로직 수정]
+                            // 보유 -> 2, 소량보유 -> 1, 소진 -> 0
+                            var spanNode = cinemaNode.SelectSingleNode(".//span");
+                            if (spanNode != null)
+                            {
+                                string status = spanNode.InnerText.Trim();
+
+                                if (status.Contains("소진"))
+                                {
+                                    item.StockCount = 0; // 소진
+                                }
+                                else if (status.Contains("소량")) // "소량보유"
+                                {
+                                    item.StockCount = 1; // 소량
+                                }
+                                else if (status.Contains("보유")) // "보유" (소량 아님)
+                                {
+                                    item.StockCount = 2; // 보유
+                                }
+                                else
+                                {
+                                    // 숫자 파싱 (예외 처리용)
+                                    var match = Regex.Match(status, @"\d+");
+                                    if (match.Success && int.TryParse(match.Value, out int count))
+                                    {
+                                        item.StockCount = count;
+                                    }
+                                    else
+                                    {
+                                        item.StockCount = 0; // 알 수 없음 -> 소진으로 처리
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                item.StockCount = 0; // 상태 정보 없음
+                            }
+
+                            stockList.Add(item);
+                        }
+                    }
+                }
+
+                return stockList;
+            }
+            catch
+            {
+                return new List<CinemaStockItem>();
+            }
         }
     }
 }

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-using CinePapers.Models.Common; // 공통 모델 사용
+using CinePapers.Models.Common;
 
 namespace CinePapers
 {
-    public class LotteCinemaService : ICinemaService // 인터페이스 구현
+    public class LotteCinemaService : ICinemaService
     {
         private readonly HttpClient _client;
         private const string RequestUrl = "https://www.lottecinema.co.kr/LCWS/Event/EventData.aspx";
@@ -34,7 +34,7 @@ namespace CinePapers
             };
         }
 
-        // 1. 목록 조회 (반환 타입이 List<CinemaEventItem>으로 변경됨)
+        // 이벤트 리스트 조회
         public async Task<List<CinemaEventItem>> GetEventsListAsync(string categoryCode, int pageNo, string searchText = "")
         {
             var paramData = new
@@ -47,16 +47,14 @@ namespace CinePapers
                 SearchText = searchText,
                 CinemaID = "",
                 PageNo = pageNo,
-                PageSize = 10,
+                PageSize = 20,
                 MemberNo = "0"
             };
 
-            // 내부 전용 모델(LotteEventListResponse)로 받음
             var response = await SendRequestAsync<LotteEventListResponse>(paramData);
 
             if (response?.Items == null) return new List<CinemaEventItem>();
 
-            // [핵심] 공통 모델(CinemaEventItem)로 변환
             return response.Items.Select(item => new CinemaEventItem
             {
                 EventId = item.EventID,
@@ -66,7 +64,7 @@ namespace CinePapers
             }).ToList();
         }
 
-        // 2. 상세 조회
+        // 이벤트 디테일 페이지 조회
         public async Task<CinemaEventDetail> GetEventDetailAsync(string eventId)
         {
             var paramData = new
@@ -74,7 +72,7 @@ namespace CinePapers
                 MethodName = "GetInfomationDeliveryEventDetail",
                 channelType = "HO",
                 osType = "W",
-                osVersion = "Mozilla/5.0",
+                osVersion = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
                 EventID = eventId
             };
 
@@ -83,7 +81,6 @@ namespace CinePapers
 
             if (detail == null) return null;
 
-            // 공통 상세 모델로 변환
             var commonDetail = new CinemaEventDetail
             {
                 Title = detail.EventName,
@@ -95,7 +92,6 @@ namespace CinePapers
             if (!string.IsNullOrEmpty(detail.ImgUrl))
                 commonDetail.ImageUrls.Add(detail.ImgUrl);
 
-            // 경품 ID가 있으면 재고 조회 가능하도록 설정
             if (detail.GoodsGiftItems != null && detail.GoodsGiftItems.Count > 0)
             {
                 commonDetail.OriginalGiftId = detail.GoodsGiftItems[0].FrGiftID;
@@ -105,7 +101,7 @@ namespace CinePapers
             return commonDetail;
         }
 
-        // 3. 재고 조회
+        // 이벤트 경품 수량 조회
         public async Task<List<CinemaStockItem>> GetGiftStockAsync(string eventId, string giftId)
         {
             var paramData = new
@@ -113,7 +109,7 @@ namespace CinePapers
                 MethodName = "GetCinemaGoods",
                 channelType = "HO",
                 osType = "W",
-                osVersion = "Mozilla/5.0",
+                osVersion = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
                 EventID = eventId,
                 GiftID = giftId
             };
@@ -133,7 +129,6 @@ namespace CinePapers
 
         private async Task<T> SendRequestAsync<T>(object paramData)
         {
-            // (기존과 동일한 통신 로직)
             string jsonParam = JsonSerializer.Serialize(paramData);
             using (var formData = new MultipartFormDataContent())
             {

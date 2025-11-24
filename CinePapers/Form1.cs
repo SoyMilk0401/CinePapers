@@ -406,7 +406,7 @@ namespace CinePapers
                     if (stockList.Count > 0)
                     {
                         var msgList = stockList
-                            .Where(s => s.StockCount > 0)
+                            //.Where(s => s.StockCount > 0)
                             .OrderBy(s => s.SortOrder)
                             .Select(s =>
                             {

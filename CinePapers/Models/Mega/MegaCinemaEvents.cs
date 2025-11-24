@@ -11,18 +11,18 @@ namespace CinePapers.Models.Mega
     {
         public string currentPage { get; set; } = "1";
         public string recordCountPerPage { get; set; } = "10";
-        public string eventStatCd { get; set; } = "ONG"; // 진행중(ONG)
+        public string eventStatCd { get; set; } = "ONG";
         public string eventTitle { get; set; } = "";
-        public string eventDivCd { get; set; } // 카테고리 코드 (CED01: 영화, CED03: 메가Pick 등)
+        public string eventDivCd { get; set; }
         public string eventTyCd { get; set; } = "";
         public string orderReqCd { get; set; } = "ONGlist";
     }
     public class MegaEventItem
     {
-        public string EventNo { get; set; }       // 이벤트 번호 (data-no="19256")
-        public string EventTitle { get; set; }    // 제목 (p.tit)
-        public string ImageUrl { get; set; }      // 이미지 URL (img src)
-        public string DatePeriod { get; set; }    // 기간 (p.date) -> "2025.11.29 ~ 2025.11.30"
+        public string EventNo { get; set; }
+        public string EventTitle { get; set; }
+        public string ImageUrl { get; set; }
+        public string DatePeriod { get; set; }
         public string DetailUrl
         {
             get { return $"https://www.megabox.co.kr/event/detail?eventNo={EventNo}"; }
@@ -33,8 +33,21 @@ namespace CinePapers.Models.Mega
     public class MegaEventDetail
     {
         public string EventNo { get; set; }
-        public string Title { get; set; }       // 제목 (h2.tit)
-        public string DatePeriod { get; set; }  // 기간 (p.event-detail-date > em)
+        public string Title { get; set; }
+        public string DatePeriod { get; set; }
         public List<string> ImageUrls { get; set; } = new List<string>();
+        public string GoodsNo { get; set; }
+        public bool HasStockCheck { get; set; }
+    }
+    public class MegaStockResponse
+    {
+        public string Msg { get; set; }
+        public List<MegaStockItem> StockList { get; set; }
+    }
+    public class MegaStockItem
+    {
+        public string BrchNm { get; set; }
+        public string RemainQty { get; set; }
+        public string TotalQty { get; set; }
     }
 }

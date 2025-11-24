@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text.Json;
-using CinePapers.Models.Common; // 공통 모델
+using CinePapers.Models.Common;
 
 namespace CinePapers.Models.CGV
 {
@@ -24,8 +24,11 @@ namespace CinePapers.Models.CGV
         {
             return new Dictionary<string, string>
             {
+                { "SPECIAL", "01" },
                 { "영화", "03" },
-                { "HOT/스페셜", "01" }
+                { "극장", "04" },
+                { "제휴", "05" },
+                { "멤버십/CLUB", "07" },
             };
         }
 
@@ -33,7 +36,6 @@ namespace CinePapers.Models.CGV
         {
             string url;
 
-            // 검색어 유무에 따라 다른 API 호출
             if (!string.IsNullOrEmpty(searchText))
             {
                 url = $"https://api.cgv.co.kr/tme/more/itgrSrch/searchItgrSrchAll?coCd=A420&swrd={Uri.EscapeDataString(searchText)}&lmtSrchYn=Y";
@@ -41,7 +43,6 @@ namespace CinePapers.Models.CGV
 
                 if (response?.Data?.EvntInfo?.EvntLst == null) return new List<CinemaEventItem>();
 
-                // 검색 결과 -> 공통 모델 변환
                 return response.Data.EvntInfo.EvntLst.Select(e => new CinemaEventItem
                 {
                     EventId = e.EvntNo,

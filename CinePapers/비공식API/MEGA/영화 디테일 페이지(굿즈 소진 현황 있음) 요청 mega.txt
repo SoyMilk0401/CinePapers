@@ -1,0 +1,16 @@
+curl 'https://www.megabox.co.kr/event/detail?eventNo=19211' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+  -H 'Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Cache-Control: max-age=0' \
+  -H 'Connection: keep-alive' \
+  -b 'SCOUTER=x7q1fsisd1av7l; WMONID=s9FdRqKeq6H; _ga=GA1.1.1549730839.1763956104; JSESSIONID=lFOayGYmL5jtFNCMk5HeonKn1IkQTYJVbj6Efev1zafGIdG1tIIPF26eQXu2NtSO.b25fbWVnYWJveF9kb21haW4vbWVnYS1vbi1zZXJ2ZXI3; SESSION=ZGFkZTc2YzItYmM0ZC00OWM4LWJiYWEtYzUzYmQwYWM4YjFk; _ga_5JL3VPLV2E=GS2.1.s1763964967$o4$g1$t1763965061$j35$l0$h0; _ga_LKZN3J8B1J=GS2.1.s1763964967$o4$g1$t1763965064$j32$l0$h0' \
+  -H 'Referer: https://www.megabox.co.kr/event/megabox' \
+  -H 'Sec-Fetch-Dest: document' \
+  -H 'Sec-Fetch-Mode: navigate' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-User: ?1' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"'
