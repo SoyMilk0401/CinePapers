@@ -6,12 +6,12 @@ using System.Windows.Forms;
 using CinePapers.Models.Common;
 using CinePapers.Models.CGV;
 using CinePapers.Models.Mega;
+using Microsoft.Web.WebView2.WinForms;
 
 namespace CinePapers
 {
     public partial class Form1 : Form
     {
-        // [핵심] 구체적인 클래스 대신 인터페이스 사용 (다형성)
         private ICinemaService _currentService;
 
         // UI 컨트롤
@@ -37,8 +37,9 @@ namespace CinePapers
         // ---------------------------------------------------------
         // [UI 초기화] 상단 탭, 검색창, 콤보박스 배치 (레이아웃 수정됨)
         // ---------------------------------------------------------
-        private void InitializeUI()
+        private async void InitializeUI()
         {
+
             // 1. 헤더 패널 (상단 고정)
             Panel pnlHeader = new Panel();
             pnlHeader.Dock = DockStyle.Top;
