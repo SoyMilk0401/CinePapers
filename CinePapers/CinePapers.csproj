@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.12.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.12.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.10.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -85,8 +88,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CGV\CgvCinemaEvents.cs" />
+    <Compile Include="Models\CGV\CgvCinemaService.cs" />
+    <Compile Include="Models\Common\CinemaCommon.cs" />
     <Compile Include="Models\Lotte\LotteCinemaEvents.cs" />
     <Compile Include="Models\Lotte\LotteCinemaService.cs" />
+    <Compile Include="Models\Mega\MegaCinemaEvents.cs" />
+    <Compile Include="Models\Mega\MegaCinemaService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -116,7 +124,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\CGV\" />
+    <Content Include="비공식API\CGV\검색 요청 cgv.txt" />
+    <Content Include="비공식API\CGV\검색 응답 cgv.txt" />
+    <Content Include="비공식API\CGV\경품 현황 디테일 조회 요청 cgv.txt" />
+    <Content Include="비공식API\CGV\경품 현황 디테일 조회 응답 cgv.txt" />
+    <Content Include="비공식API\CGV\경품 현황 리스트 요청 cgv.txt" />
+    <Content Include="비공식API\CGV\경품 현황 리스트 응답 cgv.txt" />
+    <Content Include="비공식API\CGV\스페셜 카테고리 요청 cgv.txt" />
+    <Content Include="비공식API\CGV\스페셜 카테고리 응답 cgv.txt" />
+    <Content Include="비공식API\CGV\영화 디테일 페이지 요청 cgv.txt" />
+    <Content Include="비공식API\CGV\영화 디테일 페이지 응답 cgv.txt" />
+    <Content Include="비공식API\CGV\영화 카테고리 요청 cgv.txt" />
+    <Content Include="비공식API\CGV\영화 카테고리 응답 cgv.txt" />
+    <Content Include="비공식API\MEGA\메가pick 카테고리 요청 mega.txt" />
+    <Content Include="비공식API\MEGA\메가pick 카테고리 응답 mega.txt" />
+    <Content Include="비공식API\MEGA\영화 디테일 페이지 요청 mega.txt" />
+    <Content Include="비공식API\MEGA\영화 디테일 페이지 응답 mega.txt" />
+    <Content Include="비공식API\MEGA\영화 카테고리 요청 mega.txt" />
+    <Content Include="비공식API\MEGA\영화 카테고리 응답 mega.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />

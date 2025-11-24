@@ -48,7 +48,6 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Form1";
             this.Text = "CinePapers";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
 
         }
