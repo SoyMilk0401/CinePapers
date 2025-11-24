@@ -1,0 +1,972 @@
+
+
+
+	<div class="inner-wrap">
+		
+
+			<div class="event-list ">
+          
+			
+                <input type="hidden" id="totCount" name="totCount" value="50" />
+				<ul>
+				
+					<li>
+						<a href="#" data-no="19256" data-netfunnel="N" class="eventBtn" title="메가박스 아트그라피 &lt;오늘 하늘이 가장 좋아, 라고 아직 말할 수 없는 나는&gt; 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/19/EC7CkDfB5CGMnXslYLNu0USOrE3ibOb9.jpg" alt="메가박스 아트그라피 &lt;오늘 하늘이 가장 좋아, 라고 아직 말할 수 없는 나는&gt;" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								메가박스 아트그라피 &lt;오늘 하늘이 가장 좋아, 라고 아직 말할 수 없는 나는&gt;
+							</p>
+
+							<p class="date">
+								2025.11.29 ~ 2025.11.30
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19267" data-netfunnel="N" class="eventBtn" title="무비타이틀 &lt;위키드: 포 굿&gt;돌비시네마관/DVA관 연속상영 전용굿즈 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/20/WJYOumIxQKekQLlom8iEC6YmYmS82C0U.jpg" alt="무비타이틀 &lt;위키드: 포 굿&gt;돌비시네마관/DVA관 연속상영 전용굿즈" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								무비타이틀 &lt;위키드: 포 굿&gt;돌비시네마관/DVA관 연속상영 전용굿즈
+							</p>
+
+							<p class="date">
+								2025.11.26 ~ 2025.12.19
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19269" data-netfunnel="N" class="eventBtn" title="[프로모션][굿즈] 랜덤 주술회전 모델킷피규어 스토어 판매 오픈 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/21/37sGb8nZIRrGDAfX7Iz0Z1ObOIHrbX5Q.jpg" alt="[프로모션][굿즈] 랜덤 주술회전 모델킷피규어 스토어 판매 오픈" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[프로모션][굿즈] 랜덤 주술회전 모델킷피규어 스토어 판매 오픈
+							</p>
+
+							<p class="date">
+								2025.11.25 ~ 2025.12.14
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19268" data-netfunnel="N" class="eventBtn" title="[프로모션][굿즈] 랜덤 주술회전 인형키링 스토어 판매 오픈 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/21/gzdO2Db8scN752vARTx5ZHavucJA3Vqj.jpg" alt="[프로모션][굿즈] 랜덤 주술회전 인형키링 스토어 판매 오픈" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[프로모션][굿즈] 랜덤 주술회전 인형키링 스토어 판매 오픈
+							</p>
+
+							<p class="date">
+								2025.11.25 ~ 2025.12.14
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19250" data-netfunnel="N" class="eventBtn" title="[100% 당첨!] 매직 박스가 열리는 시간ㅣ유니버셜 스튜디오 재팬으로 떠나자! 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/19/jiXJPBzpKLedeHQ3m8gYfvtbvurACP7U.jpg" alt="[100% 당첨!] 매직 박스가 열리는 시간ㅣ유니버셜 스튜디오 재팬으로 떠나자!" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[100% 당첨!] 매직 박스가 열리는 시간ㅣ유니버셜 스튜디오 재팬으로 떠나자!
+							</p>
+
+							<p class="date">
+								2025.11.24 ~ 2025.12.14
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19189" data-netfunnel="N" class="eventBtn" title="메가박스 아트그라피 &lt;가타카&gt; 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/11/l3kE0jFLI4pdaB19Ht7hIUvk2G0lXwz6.jpg" alt="메가박스 아트그라피 &lt;가타카&gt;" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								메가박스 아트그라피 &lt;가타카&gt;
+							</p>
+
+							<p class="date">
+								2025.11.22 ~ 2025.11.23
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19082" data-netfunnel="N" class="eventBtn" title="&lt;투모로우바이투게더 브이알 콘서트 : 하트 어택&gt; 대구신세계 예매 안내 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/07/bzQ0BvLuWoVSmaxScpV1rJ5enssFHuX7.jpg" alt="&lt;투모로우바이투게더 브이알 콘서트 : 하트 어택&gt; 대구신세계 예매 안내" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;투모로우바이투게더 브이알 콘서트 : 하트 어택&gt; 대구신세계 예매 안내
+							</p>
+
+							<p class="date">
+								2025.11.21 ~ 2025.11.30
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19201" data-netfunnel="N" class="eventBtn" title="&lt;주토피아2&gt; 팝업스토어 오픈 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/12/oFRDyUps98Be7Pk6fnHVN84IKyzf46vR.png" alt="&lt;주토피아2&gt; 팝업스토어 오픈" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;주토피아2&gt; 팝업스토어 오픈
+							</p>
+
+							<p class="date">
+								2025.11.20 ~ 2025.12.21
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19220" data-netfunnel="N" class="eventBtn" title="[가타카] 랜덤 포인트 지급! 당신의 DNA는? 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/13/5PzqbpdOsawTSPu6nDB7q4eePHjBb4pD.jpg" alt="[가타카] 랜덤 포인트 지급! 당신의 DNA는?" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[가타카] 랜덤 포인트 지급! 당신의 DNA는?
+							</p>
+
+							<p class="date">
+								2025.11.20 ~ 2025.11.23
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19252" data-netfunnel="N" class="eventBtn" title="[프로모션][굿즈] &lt;주토피아2&gt; 굿즈 런칭!  상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/19/Go58uIzyU0VsFC6SnTlszIUAQXKpHeU5.jpg" alt="[프로모션][굿즈] &lt;주토피아2&gt; 굿즈 런칭! " onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[프로모션][굿즈] &lt;주토피아2&gt; 굿즈 런칭! 
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19214" data-netfunnel="N" class="eventBtn" title="&lt;짧은영화&gt; 리미티드 무비패키지 런칭 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/13/DYavjJu09H9f827QTxaJTLDVY8oWx0Eo.jpg" alt="&lt;짧은영화&gt; 리미티드 무비패키지 런칭" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;짧은영화&gt; 리미티드 무비패키지 런칭
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.12.28
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19251" data-netfunnel="N" class="eventBtn" title="2025 시네 텍스트-힙: 나를 찾아 떠나는 참여형 북콘서트 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/19/XmAD951BMELWj7EAggF2r8ZByRaUrR73.jpg" alt="2025 시네 텍스트-힙: 나를 찾아 떠나는 참여형 북콘서트" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								2025 시네 텍스트-힙: 나를 찾아 떠나는 참여형 북콘서트
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.12.23
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19218" data-netfunnel="N" class="eventBtn" title="메가박스 오리지널 티켓 No. 155 &lt;위키드: 포 굿&gt; 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/13/pCXkS9VyCzYK8XwilD29aI1YKistdbYt.jpg" alt="메가박스 오리지널 티켓 No. 155 &lt;위키드: 포 굿&gt;" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								메가박스 오리지널 티켓 No. 155 &lt;위키드: 포 굿&gt;
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.12.10
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19187" data-netfunnel="N" class="eventBtn" title="메가박스 짧은영화 SCENE TAG &lt;리코더 시험&gt; 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/11/dhlO5RovHAMWxAsdDpUwz1cLE4Dv4i2M.jpg" alt="메가박스 짧은영화 SCENE TAG &lt;리코더 시험&gt;" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								메가박스 짧은영화 SCENE TAG &lt;리코더 시험&gt;
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.12.09
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19258" data-netfunnel="N" class="eventBtn" title="[짧은영화 EP.04] &lt;리코더 시험&gt; 헤택이 쏟아지는 3천원의 행복 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/19/Y7Vloaq43ypqucUPaf23pKxgUySVKkH8.jpg" alt="[짧은영화 EP.04] &lt;리코더 시험&gt; 헤택이 쏟아지는 3천원의 행복" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[짧은영화 EP.04] &lt;리코더 시험&gt; 헤택이 쏟아지는 3천원의 행복
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.12.07
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19249" data-netfunnel="N" class="eventBtn" title="&lt;국보&gt; 1PICK 이벤트 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/19/Ub6oj9Lts64C1P0jZB8nCegVDgMxxaG2.jpg" alt="&lt;국보&gt; 1PICK 이벤트" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;국보&gt; 1PICK 이벤트
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.12.07
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19211" data-netfunnel="N" class="eventBtn" title="&lt;위키드: 포 굿&gt; 돌비 포스터 &lsquo;For You&rsquo; 증정 이벤트 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/13/Hwa3bIlXkhAdFeLMvLvesk6DZ6qDkRAg.jpg" alt="&lt;위키드: 포 굿&gt; 돌비 포스터 &lsquo;For You&rsquo; 증정 이벤트" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;위키드: 포 굿&gt; 돌비 포스터 &lsquo;For You&rsquo; 증정 이벤트
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.12.07
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19257" data-netfunnel="N" class="eventBtn" title="[짧은영화 EP.03] 나도 평론가! &lt;리코더 시험&gt; 리뷰 이벤트 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/19/TiDmkAhi9c48AT6kHGDIoJBqKWLdKKo3.jpg" alt="[짧은영화 EP.03] 나도 평론가! &lt;리코더 시험&gt; 리뷰 이벤트" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[짧은영화 EP.03] 나도 평론가! &lt;리코더 시험&gt; 리뷰 이벤트
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.11.30
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19243" data-netfunnel="N" class="eventBtn" title="[프로모션][굿즈] &lt;위키드: 포 굿&gt; 솔로팩 &amp; 듀오팩 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/18/8SKzfU7o3QpOVlxlc5V2eSfGLpZw2zz7.jpg" alt="[프로모션][굿즈] &lt;위키드: 포 굿&gt; 솔로팩 &amp; 듀오팩" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[프로모션][굿즈] &lt;위키드: 포 굿&gt; 솔로팩 &amp; 듀오팩
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.11.30
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19260" data-netfunnel="N" class="eventBtn" title="[메가 트렌디] 애니피플 모여라! AGF 2025 래플 응모하기 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/19/KFJEF3ge8xeCLPQXmyGfFh8nX42TWPXd.jpg" alt="[메가 트렌디] 애니피플 모여라! AGF 2025 래플 응모하기" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[메가 트렌디] 애니피플 모여라! AGF 2025 래플 응모하기
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.11.27
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19215" data-netfunnel="N" class="eventBtn" title="&lt;위키드:포굿&gt; 굿즈패키지 런칭 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/13/n2rVdwFjFIAG02lCHAW1vkyLnZ2iRyLm.jpg" alt="&lt;위키드:포굿&gt; 굿즈패키지 런칭" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;위키드:포굿&gt; 굿즈패키지 런칭
+							</p>
+
+							<p class="date">
+								2025.11.19 ~ 2025.11.23
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19210" data-netfunnel="N" class="eventBtn" title="메가박스 오리지널 티켓 No.156 &lt;국보&gt; 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/13/qX1L10n2NdkdR0GYe0YtPvuBRslPys4M.jpg" alt="메가박스 오리지널 티켓 No.156 &lt;국보&gt;" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								메가박스 오리지널 티켓 No.156 &lt;국보&gt;
+							</p>
+
+							<p class="date">
+								2025.11.18 ~ 2025.12.07
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19017" data-netfunnel="N" class="eventBtn" title="&lt;에이티즈 브이알 콘서트 : 라이트 더 웨이&gt; 1차 예매 안내 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/19/4lVRMz3x4gUi5ARnVxUcRhJ7cJenVIkw.jpg" alt="&lt;에이티즈 브이알 콘서트 : 라이트 더 웨이&gt; 1차 예매 안내" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;에이티즈 브이알 콘서트 : 라이트 더 웨이&gt; 1차 예매 안내
+							</p>
+
+							<p class="date">
+								2025.11.18 ~ 2025.12.11
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19245" data-netfunnel="N" class="eventBtn" title="응원은 메가할게, 꽃길은 네가 가라! 콤보 3천원 할인 쿠폰 드려요 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/18/viNymgcogJl67EY4c3LQud7WEkGQjTyq.jpg" alt="응원은 메가할게, 꽃길은 네가 가라! 콤보 3천원 할인 쿠폰 드려요" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								응원은 메가할게, 꽃길은 네가 가라! 콤보 3천원 할인 쿠폰 드려요
+							</p>
+
+							<p class="date">
+								2025.11.18 ~ 2025.11.30
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19151" data-netfunnel="N" class="eventBtn" title="[고양스타필드] &#39;돌비 비전+애트모스&#39;관 신규 오픈 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/06/gSzWSPiV3OyKBHjCNzbYVUxq0ipLt3LQ.jpg" alt="[고양스타필드] &#39;돌비 비전+애트모스&#39;관 신규 오픈" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[고양스타필드] &#39;돌비 비전+애트모스&#39;관 신규 오픈
+							</p>
+
+							<p class="date">
+								2025.11.14 ~ 2025.12.14
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19168" data-netfunnel="N" class="eventBtn" title="분당이 누웠당! 분당점 리뉴얼 오픈 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/07/3Ok139fGzFARW6LQ1Z2udzgvxVfr62KH.jpg" alt="분당이 누웠당! 분당점 리뉴얼 오픈" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								분당이 누웠당! 분당점 리뉴얼 오픈
+							</p>
+
+							<p class="date">
+								2025.11.13 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19161" data-netfunnel="N" class="eventBtn" title="응원은 메가할게, 꽃길은 네가 가라! 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/06/cBR1zAsR9ouMr4aNy0KldHoKGbc7lWxm.jpg" alt="응원은 메가할게, 꽃길은 네가 가라!" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								응원은 메가할게, 꽃길은 네가 가라!
+							</p>
+
+							<p class="date">
+								2025.11.13 ~ 2025.11.30
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19192" data-netfunnel="N" class="eventBtn" title="&lt;나우 유 씨 미3&gt; 1PICK 이벤트 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/11/2UrGFwoa8mdoYxejadBT4CaKTvJ9Zo3K.jpg" alt="&lt;나우 유 씨 미3&gt; 1PICK 이벤트" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;나우 유 씨 미3&gt; 1PICK 이벤트
+							</p>
+
+							<p class="date">
+								2025.11.12 ~ 2025.11.30
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19194" data-netfunnel="N" class="eventBtn" title="&lt;뱀파이어 헌터D&gt; N차 관람 이벤트 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/12/X4Ah3PHCCkn1RJK6mDzy16Q2odhD6K3I.jpg" alt="&lt;뱀파이어 헌터D&gt; N차 관람 이벤트" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;뱀파이어 헌터D&gt; N차 관람 이벤트
+							</p>
+
+							<p class="date">
+								2025.11.12 ~ 2025.11.25
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19163" data-netfunnel="N" class="eventBtn" title="메가박스 오리지널 티켓 No.154 &lt;나우 유 씨 미 3&gt; 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/11/SIP5QIXLKuDD3LIRIzJzPVP2I5f8uYfv.jpg" alt="메가박스 오리지널 티켓 No.154 &lt;나우 유 씨 미 3&gt;" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								메가박스 오리지널 티켓 No.154 &lt;나우 유 씨 미 3&gt;
+							</p>
+
+							<p class="date">
+								2025.11.07 ~ 2025.12.05
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19148" data-netfunnel="N" class="eventBtn" title="[프로모션][굿즈] &lt;포대팝콘팩&gt; 콤보 런칭 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/06/4h4MjVlw4rvGCMt7EHmJdkILSGZqqBgf.jpg" alt="[프로모션][굿즈] &lt;포대팝콘팩&gt; 콤보 런칭" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[프로모션][굿즈] &lt;포대팝콘팩&gt; 콤보 런칭
+							</p>
+
+							<p class="date">
+								2025.11.07 ~ 2025.11.30
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19149" data-netfunnel="N" class="eventBtn" title="2026 메가박스 다이어리 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/05/FbMnqNyFTTuG0mFAPUlOwM5s8Ju2zbTk.jpg" alt="2026 메가박스 다이어리" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								2026 메가박스 다이어리
+							</p>
+
+							<p class="date">
+								2025.11.05 ~ 2026.03.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="18991" data-netfunnel="N" class="eventBtn" title="&lt;반지의 제왕&gt;을 돌비로 만나다 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/10/20/BwzMEfUtRsPamtD6Zm8aIB9aQKoeVkzp.jpg" alt="&lt;반지의 제왕&gt;을 돌비로 만나다" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;반지의 제왕&gt;을 돌비로 만나다
+							</p>
+
+							<p class="date">
+								2025.11.05 ~ 2026.01.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19110" data-netfunnel="N" class="eventBtn" title="&lt;베이비걸&gt; 2주차 스페셜 굿즈 무비타이틀 증정 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/03/vvn8NILG3FarCbAhDsDdeSUQbqXko1Fg.jpg" alt="&lt;베이비걸&gt; 2주차 스페셜 굿즈 무비타이틀 증정" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								&lt;베이비걸&gt; 2주차 스페셜 굿즈 무비타이틀 증정
+							</p>
+
+							<p class="date">
+								2025.11.05 ~ 2025.12.01
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="18807" data-netfunnel="N" class="eventBtn" title="미숫가루 런칭 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/09/26/QrdUPQfBXgGXr82Sho6fTgOz3gBKlNq6.jpg" alt="미숫가루 런칭" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								미숫가루 런칭
+							</p>
+
+							<p class="date">
+								2025.09.29 ~ 2025.11.30
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="18714" data-netfunnel="N" class="eventBtn" title="오늘 고백하면 크리스마스에 100일이야❤️  상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/09/16/hfzaUew7Zm9QxBZjeTWQ8GWnywrmMUI4.jpg" alt="오늘 고백하면 크리스마스에 100일이야❤️ " onerror="noImg(this);"></p>
+
+							<p class="tit">
+								오늘 고백하면 크리스마스에 100일이야❤️ 
+							</p>
+
+							<p class="date">
+								2025.09.17 ~ 2025.12.25
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="18484" data-netfunnel="N" class="eventBtn" title="[MEGA ONLY] 단편영화 큐레이션 짧은영화 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/08/18/76aqjeSji16k8job9ficjMFwESYPinnu.jpg" alt="[MEGA ONLY] 단편영화 큐레이션 짧은영화" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[MEGA ONLY] 단편영화 큐레이션 짧은영화
+							</p>
+
+							<p class="date">
+								2025.08.18 ~ 2026.01.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="18318" data-netfunnel="N" class="eventBtn" title="20~35세 관객을 위한 트렌디한 혜택! 메가 트렌디 클럽 런칭 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/07/22/cL9n2RYFIrmT2fKnxr7X4vhcWblOQvXm.jpg" alt="20~35세 관객을 위한 트렌디한 혜택! 메가 트렌디 클럽 런칭" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								20~35세 관객을 위한 트렌디한 혜택! 메가 트렌디 클럽 런칭
+							</p>
+
+							<p class="date">
+								2025.07.23 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="18097" data-netfunnel="N" class="eventBtn" title="매월 특별관 할인 혜택을 받아요! 메가 프리미엄 클럽 런칭 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/06/17/ZfFRV9J7kYmNyzaJfOx3wJxUuNpqx4CC.jpg" alt="매월 특별관 할인 혜택을 받아요! 메가 프리미엄 클럽 런칭" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								매월 특별관 할인 혜택을 받아요! 메가 프리미엄 클럽 런칭
+							</p>
+
+							<p class="date">
+								2025.06.18 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19240" data-netfunnel="N" class="eventBtn" title="메가박스 오리지널 슬라이드 No.15 &lt;가타카&gt; 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/11/18/jmTNk101I71G6jbGNqJUUU6Kbdn4dw3S.jpg" alt="메가박스 오리지널 슬라이드 No.15 &lt;가타카&gt;" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								메가박스 오리지널 슬라이드 No.15 &lt;가타카&gt;
+							</p>
+
+							<p class="date">
+								2025.11.20 ~ 2025.12.19
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="19105" data-netfunnel="N" class="eventBtn" title="메가박스 오리지널 티켓 No.153 &lt;프레데터: 죽음의 땅&gt; 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/10/31/wgVt4dkaGygLXKxzEj7IwxDaiq7jicVM.jpg" alt="메가박스 오리지널 티켓 No.153 &lt;프레데터: 죽음의 땅&gt;" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								메가박스 오리지널 티켓 No.153 &lt;프레데터: 죽음의 땅&gt;
+							</p>
+
+							<p class="date">
+								2025.11.05 ~ 2025.12.04
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="18110" data-netfunnel="N" class="eventBtn" title="어린이/청소년 영화교육 프로그램 &lt;너랑봄&gt; 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/06/18/mm3lHMnrCH8PvLNTUZdhiUMlTx5hxSpB.png" alt="어린이/청소년 영화교육 프로그램 &lt;너랑봄&gt;" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								어린이/청소년 영화교육 프로그램 &lt;너랑봄&gt;
+							</p>
+
+							<p class="date">
+								2025.06.18 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="17915" data-netfunnel="N" class="eventBtn" title="모일수록 커지는 메가 혜택!! 메가 패밀리 클럽 런칭 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/05/20/MvxjunHyExwibqhjl2Zg1Lz7SByfIBJT.jpg" alt="모일수록 커지는 메가 혜택!! 메가 패밀리 클럽 런칭" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								모일수록 커지는 메가 혜택!! 메가 패밀리 클럽 런칭
+							</p>
+
+							<p class="date">
+								2025.05.21 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="17662" data-netfunnel="N" class="eventBtn" title="영화 매니아를 위한 완벽 패키지!! 메가 매니아 클럽 런칭 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/04/14/b4Mherbe0w0PZZkHIuTAjM2ctNQe9edz.jpg" alt="영화 매니아를 위한 완벽 패키지!! 메가 매니아 클럽 런칭" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								영화 매니아를 위한 완벽 패키지!! 메가 매니아 클럽 런칭
+							</p>
+
+							<p class="date">
+								2025.04.14 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="17364" data-netfunnel="N" class="eventBtn" title="2025 메가박스 VIP 혜택 안내 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/03/05/M659MmHSSJH4HGK0ejHywpg0Gw7gve3w.jpg" alt="2025 메가박스 VIP 혜택 안내" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								2025 메가박스 VIP 혜택 안내
+							</p>
+
+							<p class="date">
+								2025.03.05 ~ 2026.02.28
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="16048" data-netfunnel="N" class="eventBtn" title="메가박스앱 첫 구매고객 대상 1+1 쿠폰 이벤트! 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/02/04/CKLPJ42rLydjVBqheQwg0ZhLmHwCrdr1.jpg" alt="메가박스앱 첫 구매고객 대상 1+1 쿠폰 이벤트!" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								메가박스앱 첫 구매고객 대상 1+1 쿠폰 이벤트!
+							</p>
+
+							<p class="date">
+								2025.01.30 ~ 2026.01.06
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="17006" data-netfunnel="N" class="eventBtn" title="빵원티켓이 달라졌어요! 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/01/14/NjmecKtRDTWcrxddrkH0CKYE4oSc4f6h.jpg" alt="빵원티켓이 달라졌어요!" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								빵원티켓이 달라졌어요!
+							</p>
+
+							<p class="date">
+								2025.01.14 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="16920" data-netfunnel="N" class="eventBtn" title="나도 영화 평론가! 관람평 작성하고 50P 받자! 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/06/24/0CVprz1jWRpGI3H9BnlUhy9fGUq3W13q.jpg" alt="나도 영화 평론가! 관람평 작성하고 50P 받자!" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								나도 영화 평론가! 관람평 작성하고 50P 받자!
+							</p>
+
+							<p class="date">
+								2025.01.01 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="17646" data-netfunnel="N" class="eventBtn" title="[100% 누구나 당첨] 알림받으면 최대 영화 무료 관람! 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2025/04/09/u8ZrPYphHA0wthjZTW3QH56kA2yxAQ4A.jpg" alt="[100% 누구나 당첨] 알림받으면 최대 영화 무료 관람!" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[100% 누구나 당첨] 알림받으면 최대 영화 무료 관람!
+							</p>
+
+							<p class="date">
+								2024.12.02 ~ 2026.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+					<li>
+						<a href="#" data-no="11983" data-netfunnel="N" class="eventBtn" title="[예지미인X메가박스] 그날에 당황하지 말고 PINK BOX 상세보기">
+							
+
+							<!--<p class="img"><img src="../../../static/pc/images/event/@img-event-list-megabox.jpg" alt="" /></p>-->
+							<p class="img"> <img src="https://img.megabox.co.kr/SharedImg/event/2024/12/23/vzfDx9psEXCNKkmmCGhxLSO3eJmhmOry.jpg" alt="[예지미인X메가박스] 그날에 당황하지 말고 PINK BOX" onerror="noImg(this);"></p>
+
+							<p class="tit">
+								[예지미인X메가박스] 그날에 당황하지 말고 PINK BOX
+							</p>
+
+							<p class="date">
+								2022.10.07 ~ 2025.12.31
+							</p>
+						</a>
+                
+					</li>
+
+				
+				</ul>
+			
+			
+          
+			</div>
+		
+
+		
+	</div>
+

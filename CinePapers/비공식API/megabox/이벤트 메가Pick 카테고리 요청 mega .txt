@@ -1,0 +1,17 @@
+curl 'https://www.megabox.co.kr/on/oh/ohe/Event/eventMngDiv.do' \
+  -H 'Accept: text/html, */*; q=0.01' \
+  -H 'Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json;charset=UTF-8' \
+  -b 'SCOUTER=zpjjbfm0c29jn; JSESSIONID=z6O594Nq71FiwWqUHjYSEFaTjdKsB1KapHJn8P7WtT0NNuGetMITHfatKv2BXpCF.b25fbWVnYWJveF9kb21haW4vbWVnYS1vbi1zZXJ2ZXI3; WMONID=MC3zYZz76_j; SESSION=MzRiNmY4YjEtMWVmMC00Y2Y1LTk4NDgtMTFkMDI4MmY3NWMw; _ga=GA1.1.377766111.1763790377; _ga_5JL3VPLV2E=GS2.1.s1763790376$o1$g1$t1763790604$j60$l0$h0; _ga_LKZN3J8B1J=GS2.1.s1763790376$o1$g1$t1763790604$j60$l0$h0' \
+  -H 'Origin: https://www.megabox.co.kr' \
+  -H 'Referer: https://www.megabox.co.kr/event/megabox' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  -H 'sec-ch-ua: "Chromium";v="136", "Google Chrome";v="136", "Not.A/Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --data-raw '{"currentPage":"1","recordCountPerPage":"1000","eventStatCd":"ONG","eventTitle":"","eventDivCd":"CED03","eventTyCd":"","orderReqCd":"ONGlist"}'

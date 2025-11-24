@@ -1,0 +1,16 @@
+curl 'https://www.lottecinema.co.kr/LCWS/Event/EventData.aspx' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundary08RjsT2ufB6GmKUg' \
+  -b 'WMONID=PeF7K9rsuFM; _ga=GA1.1.1696042619.1761881105; ASP.NET_SessionId=bcuyzzpnzfxc4o3qz0hjufym; AD_DMC=1; TS019bdbd5=01337fb46980aacfcf51e70fe449141acb4812b2c78c29c5d54356524fd099d31216755d433c21a25421a578c9a6a0b88fd0416a11; HomeAppBanner=true; TS01570c53=01337fb4693f29c932a4d2962d646bb540308f1a6978ac1e81a9883e9f0660a66b98655253ed38c9bdcd1e27c5187a3a50838ce2e9; _ga_V1QXBM747X=GS2.1.s1763894523$o9$g1$t1763897836$j47$l0$h0' \
+  -H 'Origin: https://www.lottecinema.co.kr' \
+  -H 'Referer: https://www.lottecinema.co.kr/NLCHS/Event/EventTemplateInfo?eventId=201010016925720' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="136", "Google Chrome";v="136", "Not.A/Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --data-raw $'------WebKitFormBoundary08RjsT2ufB6GmKUg\r\nContent-Disposition: form-data; name="paramList"\r\n\r\n{"MethodName":"GetCinemaGoods","channelType":"HO","osType":"W","osVersion":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36","EventID":"201010016925720","GiftID":"13366"}\r\n------WebKitFormBoundary08RjsT2ufB6GmKUg--\r\n'
