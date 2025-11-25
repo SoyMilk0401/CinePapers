@@ -39,11 +39,11 @@ namespace CinePapers
         private void InitializeCustomUI()
         {
             // 상단 헤더
-            Panel pnlHeader = new Panel { Dock = DockStyle.Top, Height = 40, Padding = new Padding(5) };
+            Panel pnlHeader = new Panel { Dock = DockStyle.Top, Height = 33, Padding = new Padding(5) };
             this.Controls.Add(pnlHeader);
 
             // 1. 콤보박스
-            _cboCinema = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 120, Dock = DockStyle.Right, Font = new Font("맑은 고딕", 10F) };
+            _cboCinema = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 120, Dock = DockStyle.Right, Font = new Font("맑은 고딕", 9F) };
             foreach (var s in CinemaServiceManager.GetAvailableServices()) _cboCinema.Items.Add(s);
             _cboCinema.DisplayMember = "CinemaName";
             _cboCinema.SelectedIndexChanged += OnCinemaChanged;
