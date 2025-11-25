@@ -2,10 +2,10 @@
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CinePapers.Controls; // 분리된 파일 사용
-using CinePapers.Forms;    // 분리된 파일 사용
+using CinePapers.Controls;
+using CinePapers.Forms;
 using CinePapers.Models.Common;
-using CinePapers.Services; // 분리된 파일 사용
+using CinePapers.Services;
 
 namespace CinePapers
 {
@@ -26,9 +26,14 @@ namespace CinePapers
             InitializeComponent();
             InitializeCustomUI();
 
-            // 초기 실행
             if (_cboCinema.Items.Count > 0)
                 _cboCinema.SelectedIndex = 0;
+
+            Rectangle screen = Screen.PrimaryScreen.WorkingArea;
+            int w = (int)(screen.Width * 0.75);
+            int h = (int)(screen.Height * 0.75);
+            this.Size = new Size(w, h);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void InitializeCustomUI()
@@ -67,13 +72,11 @@ namespace CinePapers
             flowLayoutPanel1.MouseWheel += OnListScroll;
         }
 
-        // [버그 수정] 영화관 변경 로직 개선
         private void OnCinemaChanged(object sender, EventArgs e)
         {
             _currentService = _cboCinema.SelectedItem as ICinemaService;
             if (_currentService == null) return;
 
-            // ★ 중요: 탭 변경 중 이벤트가 불필요하게 발생하는 것을 방지하기 위해 이벤트 제거
             _tabCategory.SelectedIndexChanged -= TabSelectionHandler;
 
             _tabCategory.TabPages.Clear();
@@ -83,17 +86,13 @@ namespace CinePapers
                 _tabCategory.TabPages.Add(page);
             }
 
-            // 첫 번째 탭 선택 (데이터가 있을 경우)
             if (_tabCategory.TabPages.Count > 0)
                 _tabCategory.SelectedIndex = 0;
 
-            // ★ 중요: 이벤트 다시 연결 및 강제 로드 실행
-            // 이렇게 하면 '이미 0번 인덱스라 이벤트가 안 터지는 문제'와 '중복 로드'를 모두 해결합니다.
             _tabCategory.SelectedIndexChanged += TabSelectionHandler;
             _ = ReloadEventsAsync();
         }
 
-        // 람다식 대신 메서드로 분리하여 이벤트 구독/해지 용이하게 변경
         private void TabSelectionHandler(object sender, EventArgs e)
         {
             _ = ReloadEventsAsync();
@@ -111,7 +110,6 @@ namespace CinePapers
         {
             if (_isLoading || _isEnded || _currentService == null) return;
 
-            // 선택된 탭이 없으면 중단
             if (_tabCategory.SelectedTab == null) return;
 
             _isLoading = true;
@@ -132,7 +130,6 @@ namespace CinePapers
                     flowLayoutPanel1.SuspendLayout();
                     foreach (var item in events)
                     {
-                        // 분리된 컨트롤 사용
                         var card = new EventCardControl(item);
                         card.CardClicked += OnCardClicked;
                         flowLayoutPanel1.Controls.Add(card);
@@ -150,7 +147,6 @@ namespace CinePapers
 
         private void OnCardClicked(object sender, CinemaEventItem item)
         {
-            // 분리된 팝업 폼 사용
             var popup = new EventDetailPopup(item.EventId, item.Title, _currentService);
             popup.Show();
         }

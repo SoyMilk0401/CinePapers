@@ -31,7 +31,6 @@ namespace CinePapers.Forms
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Resize += (s, e) => ResizeImages();
 
-            // 하단 버튼
             Panel pnlBottom = new Panel { Dock = DockStyle.Bottom, Height = 60, Padding = new Padding(10), BackColor = Color.WhiteSmoke };
             this.Controls.Add(pnlBottom);
 
@@ -40,7 +39,7 @@ namespace CinePapers.Forms
                 Text = "경품 수량 확인",
                 Dock = DockStyle.Fill,
                 Enabled = false,
-                BackColor = Color.Gray, // 초기엔 비활성 색상
+                BackColor = Color.Gray,
                 ForeColor = Color.White,
                 Font = new Font("맑은 고딕", 12F, FontStyle.Bold),
                 FlatStyle = FlatStyle.Flat
@@ -66,7 +65,6 @@ namespace CinePapers.Forms
 
                 _loadingLabel.Visible = false;
 
-                // 이미지를 역순으로 Dock=Top에 추가하여 순서 맞춤
                 if (detail.ImageUrls != null)
                 {
                     for (int i = detail.ImageUrls.Count - 1; i >= 0; i--)
@@ -77,7 +75,7 @@ namespace CinePapers.Forms
                 {
                     _giftId = detail.OriginalGiftId;
                     _btnCheckStock.Enabled = true;
-                    _btnCheckStock.BackColor = Color.FromArgb(237, 28, 36); // 활성 색상
+                    _btnCheckStock.BackColor = Color.FromArgb(237, 28, 36);
                 }
                 else
                 {

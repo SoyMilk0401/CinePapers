@@ -5,11 +5,10 @@ using CinePapers.Models.Common;
 
 namespace CinePapers.Controls
 {
-    // 리스트에 들어갈 카드 디자인을 담당하는 클래스
     public class EventCardControl : UserControl
     {
         public CinemaEventItem EventData { get; private set; }
-        public event EventHandler<CinemaEventItem> CardClicked; // 클릭 알림 이벤트
+        public event EventHandler<CinemaEventItem> CardClicked;
 
         private PictureBox _pbImage;
         private Label _lblTitle;
