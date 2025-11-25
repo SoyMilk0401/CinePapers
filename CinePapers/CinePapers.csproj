@@ -99,6 +99,8 @@
     </Compile>
     <Compile Include="Models\CGV\CgvCinemaEvents.cs" />
     <Compile Include="Models\CGV\CgvCinemaService.cs" />
+    <Compile Include="Models\CGV_WebView\CgvCinemaEvents.cs" />
+    <Compile Include="Models\CGV_WebView\CgvWebViewService.cs" />
     <Compile Include="Models\Common\CinemaCommon.cs" />
     <Compile Include="Models\Lotte\LotteCinemaEvents.cs" />
     <Compile Include="Models\Lotte\LotteCinemaService.cs" />
@@ -133,7 +135,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="비공식API\CGV\검색 요청 cgv .txt" />
     <Content Include="비공식API\CGV\검색 요청 cgv.txt" />
+    <Content Include="비공식API\CGV\검색 응답 cgv .txt" />
     <Content Include="비공식API\CGV\검색 응답 cgv.txt" />
     <Content Include="비공식API\CGV\경품 현황 디테일 조회 요청 cgv.txt" />
     <Content Include="비공식API\CGV\경품 현황 디테일 조회 응답 cgv.txt" />
@@ -145,12 +149,43 @@
     <Content Include="비공식API\CGV\영화 디테일 페이지 응답 cgv.txt" />
     <Content Include="비공식API\CGV\영화 카테고리 요청 cgv.txt" />
     <Content Include="비공식API\CGV\영화 카테고리 응답 cgv.txt" />
+    <Content Include="비공식API\CGV\이벤트 스페셜 카테고리 요청 cgv .txt" />
+    <Content Include="비공식API\CGV\이벤트 스페셜 카테고리 응답 cgv .txt" />
+    <Content Include="비공식API\CGV\이벤트 영화 카테고리 요청 cgv .txt" />
+    <Content Include="비공식API\CGV\이벤트 영화 카테고리 응답 cgv .txt" />
+    <Content Include="비공식API\CGV\이벤트 카테고리 요청 cgv .txt" />
+    <Content Include="비공식API\CGV\이벤트 카테고리 응답 cgv .txt" />
+    <Content Include="비공식API\EventDetailList.bundle.js" />
+    <Content Include="비공식API\EventIndex.bundle.js" />
+    <Content Include="비공식API\lottecinema\이벤트 메인페이지 요청 lotte .txt" />
+    <Content Include="비공식API\lottecinema\이벤트 메인페이지 응답 lotte .txt" />
+    <Content Include="비공식API\lottecinema\이벤트 영화 디테일 경품 수량 요청 lotte.txt" />
+    <Content Include="비공식API\lottecinema\이벤트 영화 디테일 경품 수량 응답 lotte.txt" />
+    <Content Include="비공식API\lottecinema\이벤트 영화 디테일 요청 lotte.txt" />
+    <Content Include="비공식API\lottecinema\이벤트 영화 디테일 응답 lotte.txt" />
+    <Content Include="비공식API\lottecinema\이벤트 영화 카테고리 검색 요청 lotte .txt" />
+    <Content Include="비공식API\lottecinema\이벤트 영화 카테고리 검색 응답 lotte .txt" />
+    <Content Include="비공식API\lottecinema\이벤트 영화 카테고리 요청 lotte .txt" />
+    <Content Include="비공식API\lottecinema\이벤트 영화 카테고리 응답 lotte .txt" />
+    <Content Include="비공식API\megabox\이벤트 메가Pick 카테고리 요청 mega .txt" />
+    <Content Include="비공식API\megabox\이벤트 메가Pick 카테고리 응답 mega .txt" />
+    <Content Include="비공식API\megabox\이벤트 메인 페이지 요청 mega .txt" />
+    <Content Include="비공식API\megabox\이벤트 메인 페이지 응답 mega .txt" />
+    <Content Include="비공식API\megabox\이벤트 영화 카테고리 요청 mega .txt" />
+    <Content Include="비공식API\megabox\이벤트 영화 카테고리 응답 mega .txt" />
+    <Content Include="비공식API\MEGA\굿즈 소진 현황 조회 요청 mega.txt" />
+    <Content Include="비공식API\MEGA\굿즈 소진 현황 조회 응답 mega.txt" />
     <Content Include="비공식API\MEGA\메가pick 카테고리 요청 mega.txt" />
     <Content Include="비공식API\MEGA\메가pick 카테고리 응답 mega.txt" />
     <Content Include="비공식API\MEGA\영화 디테일 페이지 요청 mega.txt" />
     <Content Include="비공식API\MEGA\영화 디테일 페이지 응답 mega.txt" />
+    <Content Include="비공식API\MEGA\영화 디테일 페이지%28굿즈 소진 현황 있음%29 요청 mega.txt" />
+    <Content Include="비공식API\MEGA\영화 디테일 페이지%28굿즈 소진 현황 있음%29 응답 mega.txt" />
     <Content Include="비공식API\MEGA\영화 카테고리 요청 mega.txt" />
     <Content Include="비공식API\MEGA\영화 카테고리 응답 mega.txt" />
+    <Content Include="비공식API\테스트\cgv.py" />
+    <Content Include="비공식API\테스트\lotte.py" />
+    <Content Include="비공식API\테스트\mega.py" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />

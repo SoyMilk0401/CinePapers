@@ -53,7 +53,6 @@ namespace CinePapers.Models.CGV
             }
             else
             {
-                // CGV는 startRow가 0, 10, 20... (페이지 번호 아님)
                 int startRow = (pageNo - 1) * 10;
                 url = $"https://event.cgv.co.kr/evt/evt/evt/searchEvtListForPage?coCd=A420&evntCtgryLclsCd={categoryCode}&startRow={startRow}&listCount=10&sscnsChoiYn=N&expnYn=N&expoChnlCd=01";
 
@@ -61,7 +60,6 @@ namespace CinePapers.Models.CGV
 
                 if (response?.Data?.List == null) return new List<CinemaEventItem>();
 
-                // 목록 결과 -> 공통 모델 변환
                 return response.Data.List.Select(e => new CinemaEventItem
                 {
                     EventId = e.EvntNo,
@@ -85,7 +83,6 @@ namespace CinePapers.Models.CGV
                 Title = data.EvntNm,
                 DatePeriod = $"{data.EvntStartDt} ~ {data.EvntEndDt}",
                 OriginalEventId = data.EvntNo
-                // CGV는 현재 재고 조회 기능 구현 안 함 (필요시 추가 분석)
             };
 
             if (!string.IsNullOrEmpty(data.DetailImageUrl))
@@ -94,7 +91,6 @@ namespace CinePapers.Models.CGV
             return detail;
         }
 
-        // CGV는 재고 조회 구조가 달라 추후 구현하거나 빈 리스트 반환
         public Task<List<CinemaStockItem>> GetGiftStockAsync(string eventId, string giftId)
         {
             return Task.FromResult(new List<CinemaStockItem>());

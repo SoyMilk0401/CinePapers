@@ -38,9 +38,9 @@ namespace CinePapers.Models.Mega
             };
         }
 
+        // 이벤트 리스트 조회
         public async Task<List<CinemaEventItem>> GetEventsListAsync(string categoryCode, int pageNo, string searchText = "")
         {
-            // (기존 코드 동일)
             var requestData = new
             {
                 currentPage = pageNo.ToString(),
@@ -91,9 +91,9 @@ namespace CinePapers.Models.Mega
             }
         }
 
+        // 이벤트 디테일 페이지 조회
         public async Task<CinemaEventDetail> GetEventDetailAsync(string eventId)
         {
-            // (기존 코드 동일)
             string url = $"https://www.megabox.co.kr/event/detail?eventNo={eventId}";
             try
             {
@@ -140,7 +140,7 @@ namespace CinePapers.Models.Mega
             catch { return null; }
         }
 
-        // [수정됨] 굿즈 재고 조회 구현 (상태값 매핑 적용)
+        // 이벤트 경품 수량 조회
         public async Task<List<CinemaStockItem>> GetGiftStockAsync(string eventId, string giftId)
         {
             var parameters = new Dictionary<string, string>
@@ -194,8 +194,6 @@ namespace CinePapers.Models.Mega
                             var linkNode = cinemaNode.SelectSingleNode(".//a");
                             if (linkNode != null) item.CinemaName = linkNode.InnerText.Trim();
 
-                            // [상태값 파싱 로직 수정]
-                            // 보유 -> 2, 소량보유 -> 1, 소진 -> 0
                             var spanNode = cinemaNode.SelectSingleNode(".//span");
                             if (spanNode != null)
                             {
@@ -203,19 +201,18 @@ namespace CinePapers.Models.Mega
 
                                 if (status.Contains("소진"))
                                 {
-                                    item.StockCount = 0; // 소진
+                                    item.StockCount = 0;
                                 }
-                                else if (status.Contains("소량")) // "소량보유"
+                                else if (status.Contains("소량"))
                                 {
-                                    item.StockCount = 1; // 소량
+                                    item.StockCount = 1;
                                 }
-                                else if (status.Contains("보유")) // "보유" (소량 아님)
+                                else if (status.Contains("보유"))
                                 {
-                                    item.StockCount = 2; // 보유
+                                    item.StockCount = 2;
                                 }
                                 else
                                 {
-                                    // 숫자 파싱 (예외 처리용)
                                     var match = Regex.Match(status, @"\d+");
                                     if (match.Success && int.TryParse(match.Value, out int count))
                                     {
@@ -223,20 +220,19 @@ namespace CinePapers.Models.Mega
                                     }
                                     else
                                     {
-                                        item.StockCount = 0; // 알 수 없음 -> 소진으로 처리
+                                        item.StockCount = 0;
                                     }
                                 }
                             }
                             else
                             {
-                                item.StockCount = 0; // 상태 정보 없음
+                                item.StockCount = 0;
                             }
 
                             stockList.Add(item);
                         }
                     }
                 }
-
                 return stockList;
             }
             catch

@@ -2,15 +2,15 @@
 
 namespace CinePapers
 {
-    // 영화 이벤트 목록 페이지
+    // 영화 이벤트 목록 응답
     public class LotteEventListResponse
     {
         public List<EventItem> Items { get; set; }
-        public int TotalCount { get; set; }          // 전체 아이템 개수 (예: 34)
-        public string IsOK { get; set; }             // 성공 여부 ("true")
-        public string ResultMessage { get; set; }    // 메시지 ("SUCCESS")
-        public string ResultCode { get; set; }       // 결과 코드 (null)
-        public string EventResultYn { get; set; }    // 이벤트 결과 여부 (null)
+        public int TotalCount { get; set; }
+        public string IsOK { get; set; }
+        public string ResultMessage { get; set; }
+        public string ResultCode { get; set; }
+        public string EventResultYn { get; set; }
     }
     public class EventItem
     {
@@ -37,14 +37,14 @@ namespace CinePapers
         public string EventNtc { get; set; }                // 유의사항 (<P><FONT... HTML 포함 가능)
     }
 
-    // 특정 영화 디테일 페이지
+    // 특정 영화 디테일 응답
     public class LotteDetailResponse
     {
         public List<EventDetailItem> InfomationDeliveryEventDetail { get; set; }
-        public string IsOK { get; set; }             // 성공 여부 ("true")
-        public string ResultMessage { get; set; }    // 메시지 ("SUCCESS")
-        public string ResultCode { get; set; }       // 결과 코드 (null)
-        public string EventResultYn { get; set; }    // 결과 여부 (null)
+        public string IsOK { get; set; }
+        public string ResultMessage { get; set; }
+        public string ResultCode { get; set; }
+        public string EventResultYn { get; set; }
     }
     public class EventDetailItem
     {
@@ -83,15 +83,15 @@ namespace CinePapers
         public string FrGiftNm { get; set; }   // 경품명 (<주토피아2>1주차...)
     }
 
-    // 경품 수량 조회 페이지
+    // 경품 수량 조회 응답
     public class LotteGiftStockResponse
     {
-        public List<CinemaDivisionItem> CinemaDivisions { get; set; }     // 지역 구분 (서울, 경기/인천 등)
-        public List<CinemaGoodsItem> CinemaDivisionGoods { get; set; }    // 극장별 수량 정보 (핵심 데이터)
-        public string IsOK { get; set; }             // "true"
-        public string ResultMessage { get; set; }    // "SUCCESS"
-        public string ResultCode { get; set; }       // null
-        public string EventResultYn { get; set; }    // null
+        public List<CinemaDivisionItem> CinemaDivisions { get; set; }
+        public List<CinemaGoodsItem> CinemaDivisionGoods { get; set; }    // 극장별 수량 정보
+        public string IsOK { get; set; }
+        public string ResultMessage { get; set; }
+        public string ResultCode { get; set; }
+        public string EventResultYn { get; set; }
     }
     public class CinemaDivisionItem
     {

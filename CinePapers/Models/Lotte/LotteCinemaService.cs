@@ -34,6 +34,24 @@ namespace CinePapers
             };
         }
 
+        private async Task<T> SendRequestAsync<T>(object paramData)
+        {
+            string jsonParam = JsonSerializer.Serialize(paramData);
+            using (var formData = new MultipartFormDataContent())
+            {
+                formData.Add(new StringContent(jsonParam), "paramList");
+                try
+                {
+                    var response = await _client.PostAsync(RequestUrl, formData);
+                    response.EnsureSuccessStatusCode();
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                    return JsonSerializer.Deserialize<T>(responseBody, options);
+                }
+                catch { return default(T); }
+            }
+        }
+
         // 이벤트 리스트 조회
         public async Task<List<CinemaEventItem>> GetEventsListAsync(string categoryCode, int pageNo, string searchText = "")
         {
@@ -125,24 +143,6 @@ namespace CinePapers
                 StockCount = g.Cnt,
                 SortOrder = g.SortSequence
             }).ToList();
-        }
-
-        private async Task<T> SendRequestAsync<T>(object paramData)
-        {
-            string jsonParam = JsonSerializer.Serialize(paramData);
-            using (var formData = new MultipartFormDataContent())
-            {
-                formData.Add(new StringContent(jsonParam), "paramList");
-                try
-                {
-                    var response = await _client.PostAsync(RequestUrl, formData);
-                    response.EnsureSuccessStatusCode();
-                    string responseBody = await response.Content.ReadAsStringAsync();
-                    var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                    return JsonSerializer.Deserialize<T>(responseBody, options);
-                }
-                catch { return default(T); }
-            }
         }
     }
 }

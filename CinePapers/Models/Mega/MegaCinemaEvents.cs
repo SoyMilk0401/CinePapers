@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CinePapers.Models.Mega
 {
-    // 영화 이벤트 목록 페이지
+    // 영화 이벤트 목록 응답
     public class MegaEventRequest
     {
         public string currentPage { get; set; } = "1";
@@ -29,7 +29,7 @@ namespace CinePapers.Models.Mega
         }
     }
 
-    // 특정 영화 디테일 페이지
+    // 특정 영화 디테일 응답
     public class MegaEventDetail
     {
         public string EventNo { get; set; }
