@@ -118,12 +118,25 @@ namespace CinePapers.Forms
                 var stocks = await _service.GetGiftStockAsync(_eventId, _giftId);
                 if (stocks != null && stocks.Count > 0)
                 {
-                    var msg = string.Join("\n", stocks.OrderBy(s => s.SortOrder).Select(s => $"[{s.Region}] {s.CinemaName}: {s.StockCount}개"));
+                    var msg = string.Join("\n", stocks
+                        .OrderBy(s => s.SortOrder)
+                        .Select(s =>
+                        {
+                            string stockText = _service.GetStockStatusText(s.StockCount);
+                            return $"[{s.Region}] {s.CinemaName}: {stockText}";
+                        }));
+
                     MessageBox.Show(msg, "재고 현황");
                 }
-                else MessageBox.Show("재고 정보가 없습니다.");
+                else
+                {
+                    MessageBox.Show("재고 정보가 없습니다.");
+                }
             }
-            catch { MessageBox.Show("조회 실패"); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("조회 실패: " + ex.Message);
+            }
             finally
             {
                 _btnCheckStock.Enabled = true;

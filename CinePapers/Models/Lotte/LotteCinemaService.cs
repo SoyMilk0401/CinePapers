@@ -144,5 +144,16 @@ namespace CinePapers
                 SortOrder = g.SortSequence
             }).ToList();
         }
+
+        // 이벤트 경품 수량 표기 방식 정의
+        public string GetStockStatusText(int stockCount)
+        {
+            if (stockCount == 0)
+                return "소진";
+            else if (stockCount < 50)
+                return $"{stockCount}개 이하";
+            else
+                return $"{stockCount}개 이상";
+        }
     }
 }

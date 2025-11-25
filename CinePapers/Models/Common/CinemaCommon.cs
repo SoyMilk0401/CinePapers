@@ -42,5 +42,6 @@ namespace CinePapers.Models.Common
         Task<List<CinemaEventItem>> GetEventsListAsync(string categoryCode, int pageNo, string searchText = ""); // 이벤트 목록 조회
         Task<CinemaEventDetail> GetEventDetailAsync(string eventId); // 이벤트 디테일 페이지 조회
         Task<List<CinemaStockItem>> GetGiftStockAsync(string eventId, string giftId); // 이벤트 경품 수량 조회
+        string GetStockStatusText(int stockCount); // 이벤트 경품 수량 표기 방식
     }
 }

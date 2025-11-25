@@ -106,5 +106,10 @@ namespace CinePapers.Models.CGV
             }
             catch { return default(T); }
         }
+
+        public string GetStockStatusText(int stockCount)
+        {
+            return $"{stockCount}개";
+        }
     }
 }

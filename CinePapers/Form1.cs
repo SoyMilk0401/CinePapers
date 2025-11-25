@@ -30,8 +30,8 @@ namespace CinePapers
                 _cboCinema.SelectedIndex = 0;
 
             Rectangle screen = Screen.PrimaryScreen.WorkingArea;
-            int w = (int)(screen.Width * 0.75);
-            int h = (int)(screen.Height * 0.75);
+            int w = (int)(screen.Width * 0.78);
+            int h = (int)(screen.Height * 0.78);
             this.Size = new Size(w, h);
             this.StartPosition = FormStartPosition.CenterScreen;
         }
@@ -61,7 +61,7 @@ namespace CinePapers
 
             // 3. 탭 컨트롤
             _tabCategory = new TabControl { Dock = DockStyle.Fill };
-            _tabCategory.SelectedIndexChanged += (s, e) => _ = ReloadEventsAsync();
+            _tabCategory.SelectedIndexChanged += TabSelectionHandler;
             pnlHeader.Controls.Add(_tabCategory);
             _tabCategory.BringToFront();
 
@@ -116,6 +116,7 @@ namespace CinePapers
             try
             {
                 string categoryCode = _tabCategory.SelectedTab.Tag.ToString();
+                System.Diagnostics.Debug.WriteLine(categoryCode);
                 string keyword = _txtSearch.Text.Trim();
 
                 var events = await _currentService.GetEventsListAsync(categoryCode, _currentPage, keyword);

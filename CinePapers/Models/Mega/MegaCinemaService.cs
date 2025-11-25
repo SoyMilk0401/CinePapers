@@ -240,5 +240,16 @@ namespace CinePapers.Models.Mega
                 return new List<CinemaStockItem>();
             }
         }
+
+        // 이벤트 경품 수량 표기 방식 정의
+        public string GetStockStatusText(int stockCount)
+        {
+            switch (stockCount)
+            {
+                case 1: return "소량 보유";
+                case 2: return "보유";
+                default: return "소진";
+            }
+        }
     }
 }
