@@ -72,13 +72,13 @@ namespace CinePapers.Models.Mega
                         item.EventId = node.GetAttributeValue("data-no", "");
 
                         var titNode = node.SelectSingleNode(".//p[@class='tit']");
-                        if (titNode != null) item.Title = titNode.InnerText.Trim();
+                        if (titNode != null) item.Title = HtmlEntity.DeEntitize(titNode.InnerText.Trim());
 
                         var imgNode = node.SelectSingleNode(".//p[@class='img']//img");
                         if (imgNode != null) item.ImageUrl = imgNode.GetAttributeValue("src", "");
 
                         var dateNode = node.SelectSingleNode(".//p[@class='date']");
-                        if (dateNode != null) item.DatePeriod = dateNode.InnerText.Trim();
+                        if (dateNode != null) item.DatePeriod = HtmlEntity.DeEntitize(dateNode.InnerText.Trim());
 
                         list.Add(item);
                     }
@@ -104,10 +104,10 @@ namespace CinePapers.Models.Mega
                 var detail = new CinemaEventDetail { OriginalEventId = eventId };
 
                 var titleNode = doc.DocumentNode.SelectSingleNode("//div[@class='event-detail']/h2[@class='tit']");
-                if (titleNode != null) detail.Title = titleNode.InnerText.Trim();
+                if (titleNode != null) detail.Title = HtmlEntity.DeEntitize(titleNode.InnerText.Trim());
 
                 var dateNode = doc.DocumentNode.SelectSingleNode("//p[@class='event-detail-date']/em");
-                if (dateNode != null) detail.DatePeriod = dateNode.InnerText.Trim();
+                if (dateNode != null) detail.DatePeriod = HtmlEntity.DeEntitize(dateNode.InnerText.Trim());
 
                 var imgNodes = doc.DocumentNode.SelectNodes("//div[@class='event-html']//img");
                 if (imgNodes != null)
@@ -175,7 +175,7 @@ namespace CinePapers.Models.Mega
                     var btnNode = areaNode.SelectSingleNode(".//button[contains(@class, 'btn')]");
                     if (btnNode != null)
                     {
-                        string text = btnNode.InnerText.Trim();
+                        string text = HtmlEntity.DeEntitize(btnNode.InnerText.Trim());
                         int idx = text.IndexOf('(');
                         region = idx > 0 ? text.Substring(0, idx).Trim() : text;
                     }
@@ -192,12 +192,12 @@ namespace CinePapers.Models.Mega
                             };
 
                             var linkNode = cinemaNode.SelectSingleNode(".//a");
-                            if (linkNode != null) item.CinemaName = linkNode.InnerText.Trim();
+                            if (linkNode != null) item.CinemaName = HtmlEntity.DeEntitize(linkNode.InnerText.Trim());
 
                             var spanNode = cinemaNode.SelectSingleNode(".//span");
                             if (spanNode != null)
                             {
-                                string status = spanNode.InnerText.Trim();
+                                string status = HtmlEntity.DeEntitize(spanNode.InnerText.Trim());
 
                                 if (status.Contains("소진"))
                                 {
