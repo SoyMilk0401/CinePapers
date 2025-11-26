@@ -157,6 +157,8 @@
     <Content Include="비공식API\CGV\영화 디테일 페이지 응답 cgv.txt" />
     <Content Include="비공식API\CGV\영화 카테고리 요청 cgv.txt" />
     <Content Include="비공식API\CGV\영화 카테고리 응답 cgv.txt" />
+    <Content Include="비공식API\CGV\이벤트 디테일 페이지 응답2 cgv.txt" />
+    <Content Include="비공식API\CGV\이벤트 디테일 페이지 요청2 cgv.txt" />
     <Content Include="비공식API\CGV\이벤트 스페셜 카테고리 요청 cgv .txt" />
     <Content Include="비공식API\CGV\이벤트 스페셜 카테고리 응답 cgv .txt" />
     <Content Include="비공식API\CGV\이벤트 영화 카테고리 요청 cgv .txt" />

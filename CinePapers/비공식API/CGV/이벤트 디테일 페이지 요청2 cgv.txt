@@ -1,0 +1,16 @@
+﻿curl 'https://event.cgv.co.kr/evt/evt/evtDtl/searchEvtDtl?coCd=A420&evntNo=202511244142&expoChnlCd=01&previewYn=N&expnYn=N' \
+  -H 'accept: application/json' \
+  -H 'accept-language: ko-KR' \
+  -b '_ga=GA1.1.474810035.1763956101; _cfuvid=BDyEtGWR_TQGCNmDFJXrJUoQfD3QfZNUcMWZV1t7UtM-1764119285250-0.0.1.1-604800000; __cf_bm=W9kYMN8zFCNfmZT0693aOnb4Yyvt41fHxH5Dgo8wTdk-1764120215-1.0.1.1-jCv1GVasLLCQFc5Cmva8_bEFXxFL5yb4j.4IXUUJhmq7bRqmYSwsASiTR8frnbDW9mHsIvSFTy4DMSsTqdukR8mvxnVRNrDcEUgE9j7wB2E; _ga_HV92ZRC3WF=GS2.1.s1764119291$o6$g1$t1764120300$j40$l0$h0' \
+  -H 'origin: https://cgv.co.kr' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://cgv.co.kr/' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'x-signature: DKJJqC0kZH9/u7jAiG9WhmmPAyC3opi0w2ouuCioD/s=' \
+  -H 'x-timestamp: 1764120307'
