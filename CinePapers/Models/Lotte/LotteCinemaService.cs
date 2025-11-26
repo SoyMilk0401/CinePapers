@@ -65,7 +65,7 @@ namespace CinePapers
                 SearchText = searchText,
                 CinemaID = "",
                 PageNo = pageNo,
-                PageSize = 20,
+                PageSize = 12,
                 MemberNo = "0"
             };
 

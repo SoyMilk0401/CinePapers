@@ -46,7 +46,7 @@ namespace CinePapers.Models.Mega
                 currentPage = pageNo.ToString(),
                 eventDivCd = categoryCode,
                 eventStatCd = "ONG",
-                recordCountPerPage = "10",
+                recordCountPerPage = "12",
                 eventTitle = searchText
             };
 
