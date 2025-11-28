@@ -54,7 +54,7 @@ namespace CinePapers.Models.CGV_WebView
         public string EvntEndDt { get; set; }     // 종료일
         public string EvntImfilePhyscFilePathnm { get; set; } // 상세 이미지 경로
         public string EvntImfilePhyscFnm { get; set; }        // 상세 이미지 파일명
-
+        public string EvntHtmlCont { get; set; }
         public string DetailImageUrl
         {
             get

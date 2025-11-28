@@ -102,7 +102,7 @@ namespace CinePapers
             }
 
             if (_tabCategory.TabPages.Count > 0)
-                _tabCategory.SelectedIndex = 0;
+                _tabCategory.SelectedIndex = 1;
 
             _tabCategory.SelectedIndexChanged += TabSelectionHandler;
 

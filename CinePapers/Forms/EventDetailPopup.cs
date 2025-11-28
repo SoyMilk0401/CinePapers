@@ -26,7 +26,7 @@ namespace CinePapers.Forms
 
         private void InitializeUI(string title)
         {
-            this.Size = new Size(600, 800);
+            this.Size = new Size(800, 1000);
             this.Text = title;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Resize += (s, e) => ResizeImages();
