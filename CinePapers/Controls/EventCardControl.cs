@@ -33,10 +33,7 @@ namespace CinePapers.Controls
                 Location = new Point(10, 10),
                 Size = new Size(320, 200),
                 SizeMode = PictureBoxSizeMode.Zoom,
-                Cursor = Cursors.Hand,
-
-                InitialImage = Properties.Resources.loading,  // 로딩 중 표시할 이미지
-                ErrorImage = Properties.Resources.no_image    // 로딩 실패 시 표시할 이미지
+                Cursor = Cursors.Hand
             };
 
             _lblTitle = new Label
@@ -60,15 +57,8 @@ namespace CinePapers.Controls
         private void SetData()
         {
             _lblTitle.Text = EventData.Title;
-
             if (!string.IsNullOrEmpty(EventData.ImageUrl))
-            {
                 _pbImage.LoadAsync(EventData.ImageUrl);
-            }
-            else
-            {
-                _pbImage.Image = _pbImage.ErrorImage;
-            }
         }
 
         private void OnCardClicked()
