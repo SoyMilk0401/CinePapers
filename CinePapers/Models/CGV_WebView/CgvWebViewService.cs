@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.WinForms;
 using Microsoft.Web.WebView2.Core;
-using Newtonsoft.Json.Linq;
+using System.Text.Json; // JObject(Newtonsoft) 대신 System.Text.Json 사용
 using CinePapers.Models.Common;
 using System.Diagnostics;
 
@@ -110,9 +110,10 @@ namespace CinePapers.Models.CGV_WebView
             try
             {
                 var json = e.TryGetWebMessageAsString();
-                var msg = JObject.Parse(json);
 
-                if (msg["type"] != null && (msg["type"].ToString() == "log" || msg["type"].ToString() == "error"))
+                // 로그 메시지 필터링 (간단한 JSON 파싱으로 타입 확인)
+                if (json.Contains("\"type\":\"log\"") || json.Contains("\"type\": \"log\"") ||
+                    json.Contains("\"type\":\"error\"") || json.Contains("\"type\": \"error\""))
                 {
                     return;
                 }
@@ -137,10 +138,7 @@ namespace CinePapers.Models.CGV_WebView
             // 검색어가 있는 경우 검색 로직 실행
             if (!string.IsNullOrEmpty(searchText))
             {
-                // 검색 API는 페이지네이션을 다른 방식으로 처리하거나 전체를 주는 경우가 많아
-                // 1페이지 요청일 때만 검색을 수행하도록 처리 (필요시 수정 가능)
                 if (pageNo > 1) return new List<CinemaEventItem>();
-
                 return await FetchCgvSearchList(searchText);
             }
 
@@ -220,6 +218,8 @@ namespace CinePapers.Models.CGV_WebView
                 var jsonResult = await Task.WhenAny(_responseTcs.Task, Task.Delay(10000)) == _responseTcs.Task ? await _responseTcs.Task : null;
 
                 if (string.IsNullOrEmpty(jsonResult)) return new List<CinemaEventItem>();
+
+                // 리팩토링: 모델 클래스를 사용하여 파싱
                 return ParseCgvListJson(jsonResult);
             }
             catch (Exception ex)
@@ -234,11 +234,9 @@ namespace CinePapers.Models.CGV_WebView
         {
             _responseTcs = new TaskCompletionSource<string>();
 
-            // 검색어 그대로 전달 (내부적으로 인코딩 될 수 있음, 필요시 encodeURIComponent 사용)
             string script = $@"
                 (async function() {{
                     try {{
-                        // 모듈 확인 (이미 로드된 상태라고 가정)
                         if (!window.cgvParamBuilder || !window.cgvFetcher) {{
                              window.chrome.webview.postMessage(JSON.stringify({{ type: 'error', message: 'Modules missing for search' }}));
                              return;
@@ -250,15 +248,10 @@ namespace CinePapers.Models.CGV_WebView
                             'lmtSrchYn': 'Y'
                         }};
 
-                        // 서명 생성
                         var signedQuery = window.cgvParamBuilder.n(params);
-                        
-                        // 검색 API URL (도메인 api.cgv.co.kr 주의)
                         var url = 'https://api.cgv.co.kr/tme/more/itgrSrch/searchItgrSrchAll' + signedQuery;
                         
-                        // cgvFetcher를 이용해 요청 (헤더 자동 처리)
                         var response = await window.cgvFetcher.Z(url);
-                        
                         if (!response.ok) throw new Error('Network response was not ok: ' + response.status);
                         var jsonBody = await response.json();
                         
@@ -276,6 +269,8 @@ namespace CinePapers.Models.CGV_WebView
                 var jsonResult = await Task.WhenAny(_responseTcs.Task, Task.Delay(10000)) == _responseTcs.Task ? await _responseTcs.Task : null;
 
                 if (string.IsNullOrEmpty(jsonResult)) return new List<CinemaEventItem>();
+
+                // 리팩토링: 모델 클래스를 사용하여 파싱
                 return ParseCgvSearchJson(jsonResult);
             }
             catch (Exception ex)
@@ -327,6 +322,8 @@ namespace CinePapers.Models.CGV_WebView
                 var jsonResult = await Task.WhenAny(_responseTcs.Task, Task.Delay(10000)) == _responseTcs.Task ? await _responseTcs.Task : null;
 
                 if (string.IsNullOrEmpty(jsonResult)) return null;
+
+                // 리팩토링: 모델 클래스를 사용하여 파싱
                 return ParseCgvDetailJson(jsonResult);
             }
             catch (Exception ex)
@@ -336,83 +333,78 @@ namespace CinePapers.Models.CGV_WebView
             }
         }
 
-        // 리스트 파싱
+        // 리팩토링: 일반 리스트 파싱 (CgvCinemaEvents.cs 모델 사용)
         private List<CinemaEventItem> ParseCgvListJson(string jsonResult)
         {
             try
             {
-                var json = JObject.Parse(jsonResult);
-                if (json["statusCode"]?.ToString() != "0") return new List<CinemaEventItem>();
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var response = JsonSerializer.Deserialize<CgvEventListResponse>(jsonResult, options);
 
-                var list = json["data"]?["list"];
-                if (list == null) return new List<CinemaEventItem>();
+                if (response?.StatusCode != 0 || response.Data?.List == null)
+                    return new List<CinemaEventItem>();
 
-                return list.Select(item => new CinemaEventItem
+                return response.Data.List.Select(item => new CinemaEventItem
                 {
-                    EventId = item["evntNo"]?.ToString(),
-                    Title = item["evntNm"]?.ToString(),
-                    ImageUrl = GetImageUrl(item, "mduBanrPhyscFilePathnm", "mduBanrPhyscFnm"),
-                    DatePeriod = $"{item["evntStartDt"]} ~ {item["evntEndDt"]}"
-                }).ToList();
-            }
-            catch
-            {
-                return new List<CinemaEventItem>();
-            }
-        }
-
-        // [신규] 검색 결과 파싱 (사용자가 제공한 JSON 구조 반영)
-        private List<CinemaEventItem> ParseCgvSearchJson(string jsonResult)
-        {
-            try
-            {
-                var json = JObject.Parse(jsonResult);
-
-                // 검색 결과는 statusCode 0, data -> evntInfo -> evntLst 구조
-                if (json["statusCode"]?.ToString() != "0") return new List<CinemaEventItem>();
-
-                var evntInfo = json["data"]?["evntInfo"];
-                if (evntInfo == null) return new List<CinemaEventItem>();
-
-                var eventList = evntInfo["evntLst"];
-                if (eventList == null) return new List<CinemaEventItem>();
-
-                return eventList.Select(item => new CinemaEventItem
-                {
-                    EventId = item["evntNo"]?.ToString(),
-                    Title = item["evntNm"]?.ToString(),
-                    // 검색 결과 JSON의 이미지 필드는 일반 리스트와 이름이 동일함
-                    ImageUrl = GetImageUrl(item, "mduBanrPhyscFilePathnm", "mduBanrPhyscFnm"),
-                    DatePeriod = $"{item["evntStartDt"]} ~ {item["evntEndDt"]}"
+                    EventId = item.EvntNo,
+                    Title = item.EvntNm,
+                    ImageUrl = item.ImageUrl, // 모델의 ImageUrl 프로퍼티 활용
+                    DatePeriod = $"{item.EvntStartDt} ~ {item.EvntEndDt}"
                 }).ToList();
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"[CGV Search Parse Error] {ex.Message}");
+                Debug.WriteLine($"[ParseCgvListJson] Error: {ex.Message}");
                 return new List<CinemaEventItem>();
             }
         }
 
-        // 디테일 파싱
+        // 리팩토링: 검색 결과 파싱 (CgvCinemaEvents.cs 모델 사용)
+        private List<CinemaEventItem> ParseCgvSearchJson(string jsonResult)
+        {
+            try
+            {
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var response = JsonSerializer.Deserialize<CgvSearchResponse>(jsonResult, options);
+
+                if (response?.StatusCode != 0 || response.Data?.EvntInfo?.EvntLst == null)
+                    return new List<CinemaEventItem>();
+
+                return response.Data.EvntInfo.EvntLst.Select(item => new CinemaEventItem
+                {
+                    EventId = item.EvntNo,
+                    Title = item.EvntNm,
+                    ImageUrl = item.ImageUrl, // 모델의 ImageUrl 프로퍼티 활용
+                    DatePeriod = $"{item.EvntStartDt} ~ {item.EvntEndDt}"
+                }).ToList();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[ParseCgvSearchJson] Error: {ex.Message}");
+                return new List<CinemaEventItem>();
+            }
+        }
+
+        // 리팩토링: 디테일 파싱 (CgvCinemaEvents.cs 모델 사용)
         private CinemaEventDetail ParseCgvDetailJson(string jsonResult)
         {
             try
             {
-                var json = JObject.Parse(jsonResult);
-                if (json["statusCode"]?.ToString() != "0") return null;
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var response = JsonSerializer.Deserialize<CgvEventDetailResponse>(jsonResult, options);
 
-                var data = json["data"];
-                if (data == null) return null;
+                if (response?.StatusCode != 0 || response.Data == null) return null;
 
+                var data = response.Data;
                 var detail = new CinemaEventDetail
                 {
-                    OriginalEventId = data["evntNo"]?.ToString(),
-                    Title = data["evntNm"]?.ToString(),
-                    DatePeriod = $"{data["evntStartDt"]} ~ {data["evntEndDt"]}"
+                    OriginalEventId = data.EvntNo,
+                    Title = data.EvntNm,
+                    DatePeriod = $"{data.EvntStartDt} ~ {data.EvntEndDt}"
                 };
 
-                string htmlContent = data["evntHtmlCont"]?.ToString();
-
+                // HTML 컨텐츠 이미지 추출
+                string htmlContent = data.EvntHtmlCont;
                 if (!string.IsNullOrEmpty(htmlContent))
                 {
                     if (!htmlContent.Trim().StartsWith("<") && !htmlContent.Contains(" "))
@@ -432,20 +424,17 @@ namespace CinePapers.Models.CGV_WebView
                     }
                 }
 
-                if (detail.ImageUrls.Count == 0)
+                // HTML 이미지가 없으면 메인 이미지 사용
+                if (detail.ImageUrls.Count == 0 && !string.IsNullOrEmpty(data.DetailImageUrl))
                 {
-                    string imgUrl = GetImageUrl(data, "evntImfilePhyscFilePathnm", "evntImfilePhyscFnm");
-                    if (!string.IsNullOrEmpty(imgUrl))
-                    {
-                        detail.ImageUrls.Add(imgUrl);
-                    }
+                    detail.ImageUrls.Add(data.DetailImageUrl);
                 }
 
                 return detail;
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"[CGV Detail Parse Error] {ex.Message}");
+                Debug.WriteLine($"[ParseCgvDetailJson] Error: {ex.Message}");
                 return null;
             }
         }
@@ -479,14 +468,6 @@ namespace CinePapers.Models.CGV_WebView
             }
             catch { }
             return list;
-        }
-
-        private string GetImageUrl(JToken item, string pathKey, string fileKey)
-        {
-            string path = item[pathKey]?.ToString();
-            string file = item[fileKey]?.ToString();
-            if (string.IsNullOrEmpty(path) || string.IsNullOrEmpty(file)) return null;
-            return $"https://cdn.cgv.co.kr/{path}/{file}";
         }
 
         public Dictionary<string, string> GetCategories()
