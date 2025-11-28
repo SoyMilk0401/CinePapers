@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using CinePapers.Models.Common;
+using CinePapers.Models.CGV_WebView;
 using CinePapers.Models.Mega;
 
 namespace CinePapers.Services
@@ -10,6 +11,7 @@ namespace CinePapers.Services
         {
             return new List<ICinemaService>
             {
+                new CgvWebViewService(),
                 new LotteCinemaService(),
                 new MegaCinemaService()
             };

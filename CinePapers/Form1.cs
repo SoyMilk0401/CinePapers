@@ -14,7 +14,6 @@ namespace CinePapers
     {
         private MainViewModel _viewModel = new MainViewModel();
 
-        // UI 컨트롤
         private ComboBox _cboCinema;
         private TabControl _tabCategory;
         private TextBox _txtSearch;
@@ -24,33 +23,28 @@ namespace CinePapers
         {
             InitializeComponent();
 
-            // 1. 화면 크기 설정 (화면의 78%)
             Rectangle screen = Screen.PrimaryScreen.WorkingArea;
             int w = (int)(screen.Width * 0.78);
             int h = (int)(screen.Height * 0.78);
             this.Size = new Size(w, h);
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            // 2. UI 초기화
             InitializeCustomUI();
 
-            // 3. 초기 실행 (콤보박스 첫번째 항목 선택)
             if (_cboCinema.Items.Count > 0)
                 _cboCinema.SelectedIndex = 0;
         }
 
         private void InitializeCustomUI()
         {
-            // 상단 헤더 패널
             Panel pnlHeader = new Panel
             {
                 Dock = DockStyle.Top,
                 Height = 31,
-                Padding = new Padding(5, 5, 5, 0)
+                Padding = new Padding(5, 5, 15, 0)
             };
             this.Controls.Add(pnlHeader);
 
-            // 영화관 선택 콤보박스
             _cboCinema = new ComboBox
             {
                 DropDownStyle = ComboBoxStyle.DropDownList,
@@ -67,7 +61,6 @@ namespace CinePapers
             _cboCinema.SelectedIndexChanged += OnCinemaChanged;
             pnlHeader.Controls.Add(_cboCinema);
 
-            // 검색 UI
             Panel pnlSearch = new Panel { Dock = DockStyle.Right, Width = 260, Padding = new Padding(10, 0, 0, 0) };
             pnlHeader.Controls.Add(pnlSearch);
 
@@ -79,17 +72,14 @@ namespace CinePapers
             _txtSearch.KeyDown += (s, e) => { if (e.KeyCode == Keys.Enter) _ = RequestDataAsync(isReload: true); };
             pnlSearch.Controls.Add(_txtSearch);
 
-            // 탭 컨트롤
             _tabCategory = new TabControl { Dock = DockStyle.Fill, Height = 15 };
             _tabCategory.SelectedIndexChanged += TabSelectionHandler;
             pnlHeader.Controls.Add(_tabCategory);
             _tabCategory.BringToFront();
 
-            // 리스트 패널
             flowLayoutPanel1.Padding = new Padding(0, 35, 0, 0);
             pnlHeader.BringToFront();
 
-            // 스크롤 이벤트 연결
             flowLayoutPanel1.Scroll += OnListScroll;
             flowLayoutPanel1.MouseWheel += OnListScroll;
         }
@@ -133,7 +123,12 @@ namespace CinePapers
             string categoryCode = _tabCategory.SelectedTab.Tag.ToString();
             string keyword = _txtSearch.Text.Trim();
 
-            if (isReload) flowLayoutPanel1.Controls.Clear();
+            if (isReload)
+            {
+                flowLayoutPanel1.Controls.Clear();
+                // 탭 이동이나 검색 시 스크롤 위치 초기화
+                flowLayoutPanel1.AutoScrollPosition = new Point(0, 0);
+            }
 
             var events = await _viewModel.LoadEventsAsync(categoryCode, keyword, isReload);
 
@@ -147,14 +142,36 @@ namespace CinePapers
                     flowLayoutPanel1.Controls.Add(card);
                 }
                 flowLayoutPanel1.ResumeLayout();
+                flowLayoutPanel1.PerformLayout();
+
+                await CheckAndFillScreenAsync();
             }
             else if (isReload)
             {
-                MessageBox.Show("조회된 이벤트가 없습니다.");
+                // [수정됨] 팝업 대신 패널 내부에 "데이터 없음" 라벨 추가
+                ShowNoDataMessage();
             }
         }
 
-        // 카드 클릭(디테일 페이지)
+        // [신규] 데이터 없음 메시지 출력 헬퍼 메서드
+        private void ShowNoDataMessage()
+        {
+            Label lblNoData = new Label
+            {
+                Text = "조회된 이벤트가 없습니다.",
+                ForeColor = Color.Gray,
+                Font = new Font("맑은 고딕", 12F, FontStyle.Bold),
+                AutoSize = false, // 너비를 수동으로 지정하기 위해 false 설정
+                Width = flowLayoutPanel1.ClientSize.Width - 10, // 패널 가로폭에 맞춤 (스크롤바 여유 고려)
+                Height = 100, // 적당한 높이
+                TextAlign = ContentAlignment.MiddleCenter, // 텍스트 가운데 정렬
+                Margin = new Padding(0, 50, 0, 0) // 위쪽 여백을 줘서 너무 붙지 않게 함
+            };
+
+            flowLayoutPanel1.Controls.Add(lblNoData);
+        }
+
+        // 카드 클릭시 디테일 페이지 팝업
         private void OnCardClicked(object sender, CinemaEventItem item)
         {
             var popup = new EventDetailPopup(item.EventId, item.Title, _viewModel.CurrentService);
@@ -177,6 +194,16 @@ namespace CinePapers
             int currentScroll = flowLayoutPanel1.VerticalScroll.Value;
 
             return currentScroll + visibleHeight >= totalHeight - 50;
+        }
+
+        private async Task CheckAndFillScreenAsync()
+        {
+            bool hasScrollbar = flowLayoutPanel1.DisplayRectangle.Height > flowLayoutPanel1.ClientSize.Height;
+
+            if (!hasScrollbar)
+            {
+                await RequestDataAsync(false);
+            }
         }
     }
 }
