@@ -6,12 +6,8 @@ def test_lotte_endpoint(name, payload_dict):
     
     url = "https://www.lottecinema.co.kr/LCWS/Event/EventData.aspx"
     
-    # 롯데시네마는 요청 정보를 'paramList'라는 폼 데이터(JSON 문자열)로 받음
-    # 내부 payload 딕셔너리를 JSON 문자열로 변환
     param_list_json = json.dumps(payload_dict)
     
-    # multipart/form-data 형식으로 전송
-    # requests에서 일반 폼 필드는 (None, 값) 형태로 보냄
     files = {
         'paramList': (None, param_list_json)
     }
@@ -34,7 +30,6 @@ def test_lotte_endpoint(name, payload_dict):
                 print("응답 성공 (데이터 일부):")
                 print(json.dumps(data, indent=2, ensure_ascii=False)[:500] + "\n... (생략)")
                 
-                # 성공 여부 판단
                 if data.get("IsOK") == "true":
                     print(">> 결론: 정상 호출됨 (별도 보안 헤더 불필요)")
                 else:
@@ -52,7 +47,6 @@ def test_lotte_endpoint(name, payload_dict):
     
     print("\n")
 
-# 공통 요청 파라미터 (User-Agent 등)
 common_params = {
     "channelType": "HO",
     "osType": "W",
@@ -60,12 +54,10 @@ common_params = {
     "MemberNo": "0"
 }
 
-# 1. 이벤트 리스트 (영화 카테고리) 테스트
-# 출처: [이벤트 영화 카테고리 요청 lotte .txt]
 list_payload = common_params.copy()
 list_payload.update({
     "MethodName": "GetEventLists",
-    "EventClassificationCode": "20", # 20: 영화 관련 이벤트
+    "EventClassificationCode": "20",
     "SearchText": "",
     "CinemaID": "",
     "PageNo": 1,
@@ -73,23 +65,20 @@ list_payload.update({
 })
 test_lotte_endpoint("이벤트 리스트 (영화)", list_payload)
 
-# 2. 이벤트 메인 페이지 테스트
-# 출처: [이벤트 메인페이지 요청 lotte .txt]
 main_payload = common_params.copy()
 main_payload.update({
     "MethodName": "GetEventSummaryLists"
 })
 test_lotte_endpoint("이벤트 메인 요약", main_payload)
 
-# 3. 이벤트 검색 테스트
-# 출처: [이벤트 영화 카테고리 검색 요청 lotte .txt]
+
 search_payload = common_params.copy()
 search_payload.update({
     "MethodName": "GetEventLists",
     "EventClassificationCode": "20",
-    "SearchText": "체인", # 검색어: 체인
+    "SearchText": "",
     "CinemaID": "",
     "PageNo": 1,
     "PageSize": 15
 })
-test_lotte_endpoint("이벤트 검색 (체인)", search_payload)
+test_lotte_endpoint("이벤트 검색 ()", search_payload)
