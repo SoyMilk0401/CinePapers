@@ -33,7 +33,7 @@ namespace CinePapers.Controls
                 Location = new Point(10, 10),
                 Size = new Size(320, 200),
                 SizeMode = PictureBoxSizeMode.Zoom,
-                Cursor = Cursors.Hand
+                Cursor = Cursors.Hand,
             };
 
             _lblTitle = new Label
