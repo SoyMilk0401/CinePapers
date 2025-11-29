@@ -165,8 +165,6 @@
     <Content Include="비공식API\CGV\이벤트 영화 카테고리 응답 cgv .txt" />
     <Content Include="비공식API\CGV\이벤트 카테고리 요청 cgv .txt" />
     <Content Include="비공식API\CGV\이벤트 카테고리 응답 cgv .txt" />
-    <Content Include="비공식API\EventDetailList.bundle.js" />
-    <Content Include="비공식API\EventIndex.bundle.js" />
     <Content Include="비공식API\lottecinema\이벤트 메인페이지 요청 lotte .txt" />
     <Content Include="비공식API\lottecinema\이벤트 메인페이지 응답 lotte .txt" />
     <Content Include="비공식API\lottecinema\이벤트 영화 디테일 경품 수량 요청 lotte.txt" />
