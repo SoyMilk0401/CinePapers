@@ -19,8 +19,6 @@ namespace CinePapers.Models.Common
         public string Title { get; set; }
         public string DatePeriod { get; set; }
         public List<string> ImageUrls { get; set; } = new List<string>();
-
-        // 재고조회 등
         public string OriginalEventId { get; set; }
         public string OriginalGiftId { get; set; }
         public bool HasStockCheck { get; set; } = false;

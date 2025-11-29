@@ -1,10 +1,10 @@
-﻿using System;
+﻿using CinePapers.Models.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Text.Json;
-using CinePapers.Models.Common;
+using System.Threading.Tasks;
 
 namespace CinePapers.Models.CGV
 {

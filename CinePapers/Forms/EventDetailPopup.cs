@@ -1,8 +1,8 @@
-﻿using System;
+﻿using CinePapers.Models.Common;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using CinePapers.Models.Common;
 
 namespace CinePapers.Forms
 {
@@ -13,26 +13,37 @@ namespace CinePapers.Forms
         private readonly ICinemaService _service;
 
         private Panel _pnlContainer;
+        private Panel _pnlBottom;
         private Label _loadingLabel;
         private Button _btnCheckStock;
 
-        public EventDetailPopup(string eventId, string title, ICinemaService service)
+        public EventDetailPopup(string eventId, string title, ICinemaService service, Point? location = null)
         {
             _eventId = eventId;
             _service = service;
-            InitializeUI(title);
+            InitializeUI(title, location);
             this.Shown += OnFormShown;
         }
 
-        private void InitializeUI(string title)
+        private void InitializeUI(string title, Point? location)
         {
             this.Size = new Size(800, 1000);
             this.Text = title;
-            this.StartPosition = FormStartPosition.CenterScreen;
+
+            if (location.HasValue)
+            {
+                this.StartPosition = FormStartPosition.Manual;
+                this.Location = location.Value;
+            }
+            else
+            {
+                this.StartPosition = FormStartPosition.CenterScreen;
+            }
+
             this.Resize += (s, e) => ResizeImages();
 
-            Panel pnlBottom = new Panel { Dock = DockStyle.Bottom, Height = 60, Padding = new Padding(10), BackColor = Color.WhiteSmoke };
-            this.Controls.Add(pnlBottom);
+            _pnlBottom = new Panel { Dock = DockStyle.Bottom, Height = 60, Padding = new Padding(10), BackColor = Color.WhiteSmoke };
+            this.Controls.Add(_pnlBottom);
 
             _btnCheckStock = new Button
             {
@@ -45,9 +56,8 @@ namespace CinePapers.Forms
                 FlatStyle = FlatStyle.Flat
             };
             _btnCheckStock.Click += BtnCheckStock_Click;
-            pnlBottom.Controls.Add(_btnCheckStock);
+            _pnlBottom.Controls.Add(_btnCheckStock);
 
-            // 스크롤 컨테이너
             _pnlContainer = new Panel { Dock = DockStyle.Fill, AutoScroll = true, BackColor = Color.Black };
             this.Controls.Add(_pnlContainer);
             _pnlContainer.BringToFront();
@@ -65,7 +75,15 @@ namespace CinePapers.Forms
 
                 _loadingLabel.Visible = false;
 
-                if (detail.ImageUrls != null)
+                if (detail.ImageUrls == null || detail.ImageUrls.Count == 0)
+                {
+                    _pnlContainer.Visible = false;
+
+                    this.ClientSize = new Size(this.ClientSize.Width, _pnlBottom.Height);
+
+                    this.CenterToScreen();
+                }
+                else
                 {
                     for (int i = detail.ImageUrls.Count - 1; i >= 0; i--)
                         AddPictureBox(detail.ImageUrls[i]);
@@ -106,7 +124,10 @@ namespace CinePapers.Forms
         {
             if (pb.Image == null) return;
             int w = _pnlContainer.ClientSize.Width;
-            pb.Height = (int)(w * ((float)pb.Image.Height / pb.Image.Width));
+            if (pb.Image.Width > 0)
+            {
+                pb.Height = (int)(w * ((float)pb.Image.Height / pb.Image.Width));
+            }
         }
 
         private async void BtnCheckStock_Click(object sender, EventArgs e)

@@ -1,12 +1,13 @@
-﻿using System;
+﻿using CinePapers.Models.Common;
+using CinePapers.Models.Lotte;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-using CinePapers.Models.Common;
 
-namespace CinePapers
+namespace CinePapers.Models.Lottee
 {
     public class LotteCinemaService : ICinemaService
     {

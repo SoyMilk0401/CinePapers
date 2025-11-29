@@ -1,7 +1,7 @@
-﻿using System;
+﻿using CinePapers.Models.Common;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using CinePapers.Models.Common;
 
 namespace CinePapers.Controls
 {
@@ -33,7 +33,7 @@ namespace CinePapers.Controls
                 Location = new Point(10, 10),
                 Size = new Size(320, 200),
                 SizeMode = PictureBoxSizeMode.Zoom,
-                Cursor = Cursors.Hand
+                Cursor = Cursors.Hand,
             };
 
             _lblTitle = new Label
@@ -48,7 +48,6 @@ namespace CinePapers.Controls
             this.Controls.Add(_pbImage);
             this.Controls.Add(_lblTitle);
 
-            // 클릭 이벤트 연결
             this.Click += (s, e) => OnCardClicked();
             _pbImage.Click += (s, e) => OnCardClicked();
             _lblTitle.Click += (s, e) => OnCardClicked();
