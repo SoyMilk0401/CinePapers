@@ -11,12 +11,12 @@ namespace CinePapers.Models.Lottee
 {
     public class LotteCinemaService : ICinemaService
     {
-        private readonly HttpClient _client;
+        private static readonly HttpClient _client;
         private const string RequestUrl = "https://www.lottecinema.co.kr/LCWS/Event/EventData.aspx";
 
         public string CinemaName => "롯데시네마";
 
-        public LotteCinemaService()
+        static LotteCinemaService()
         {
             _client = new HttpClient();
             _client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36");

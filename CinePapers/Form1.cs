@@ -134,12 +134,14 @@ namespace CinePapers
             if (events != null && events.Count > 0)
             {
                 flowLayoutPanel1.SuspendLayout();
+
                 foreach (var item in events)
                 {
                     var card = new EventCardControl(item);
                     card.CardClicked += OnCardClicked;
                     flowLayoutPanel1.Controls.Add(card);
                 }
+
                 flowLayoutPanel1.ResumeLayout();
                 flowLayoutPanel1.PerformLayout();
 

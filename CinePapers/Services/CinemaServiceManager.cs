@@ -8,14 +8,20 @@ namespace CinePapers.Services
 {
     public static class CinemaServiceManager
     {
+        private static List<ICinemaService> _services;
+
         public static List<ICinemaService> GetAvailableServices()
         {
-            return new List<ICinemaService>
+            if (_services == null)
+            {
+                _services = new List<ICinemaService>
             {
                 new CgvWebViewService(),
                 new LotteCinemaService(),
                 new MegaCinemaService()
             };
+            }
+            return _services;
         }
     }
 }

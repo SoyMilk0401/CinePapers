@@ -64,5 +64,18 @@ namespace CinePapers.Controls
         {
             CardClicked?.Invoke(this, EventData);
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (_pbImage != null && _pbImage.Image != null)
+                {
+                    _pbImage.Image.Dispose();
+                    _pbImage.Image = null;
+                }
+            }
+            base.Dispose(disposing);
+        }
     }
 }

@@ -115,9 +115,9 @@ namespace CinePapers.Models.CGV_WebView
         private async Task<bool> WaitForHookingAsync()
         {
             int retry = 0;
-            while ((!_isInitialized || !_isHooked) && retry < 40)
+            while ((!_isInitialized || !_isHooked) && retry < 200)
             {
-                await Task.Delay(500);
+                await Task.Delay(100);
                 retry++;
             }
             return _isHooked;
