@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using CinePapers.Models.Common;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using CinePapers.Models.Common;
 
 namespace CinePapers.ViewModels
 {

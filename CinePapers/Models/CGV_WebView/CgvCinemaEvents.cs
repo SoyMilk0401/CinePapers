@@ -2,6 +2,7 @@
 
 namespace CinePapers.Models.CGV_WebView
 {
+    // 영화 이벤트 목록 페이지
     public class CgvEventListResponse
     {
         public int StatusCode { get; set; }
@@ -21,8 +22,11 @@ namespace CinePapers.Models.CGV_WebView
         public string EvntNm { get; set; }        // 이벤트명
         public string EvntStartDt { get; set; }   // 시작일
         public string EvntEndDt { get; set; }     // 종료일
+        public string EvntCtgryLclsCd { get; set; } // 카테고리 코드
         public string MduBanrPhyscFilePathnm { get; set; }
         public string MduBanrPhyscFnm { get; set; }
+        public string LagBanrPhyscFilePathnm { get; set; }
+        public string LagBanrPhyscFnm { get; set; }
         public string ImageUrl
         {
             get
@@ -34,6 +38,7 @@ namespace CinePapers.Models.CGV_WebView
         }
     }
 
+    // 특정 영화 디테일 페이지
     public class CgvEventDetailResponse
     {
         public int StatusCode { get; set; }
@@ -42,13 +47,14 @@ namespace CinePapers.Models.CGV_WebView
     }
     public class CgvEventDetailItem
     {
+        public string CoCd { get; set; }
         public string EvntNo { get; set; }
         public string EvntNm { get; set; }
         public string EvntStartDt { get; set; }
         public string EvntEndDt { get; set; }
         public string EvntImfilePhyscFilePathnm { get; set; }
         public string EvntImfilePhyscFnm { get; set; }
-        public string EvntHtmlCont { get; set; } // HTML 내용
+        public string EvntHtmlCont { get; set; }
         public string DetailImageUrl
         {
             get
@@ -60,21 +66,26 @@ namespace CinePapers.Models.CGV_WebView
         }
     }
 
+    // 검색 페이지
     public class CgvSearchResponse
     {
         public int StatusCode { get; set; }
+        public string StatusMessage { get; set; }
         public CgvSearchData Data { get; set; }
     }
     public class CgvSearchData
     {
+        public int TotalCnt { get; set; }
         public CgvSearchEvntInfo EvntInfo { get; set; }
     }
     public class CgvSearchEvntInfo
     {
+        public int TotalCnt { get; set; }
         public List<CgvSearchEventItem> EvntLst { get; set; }
     }
     public class CgvSearchEventItem
     {
+        public string CoCd { get; set; }
         public string EvntNo { get; set; }
         public string EvntNm { get; set; }
         public string EvntStartDt { get; set; }
@@ -92,25 +103,34 @@ namespace CinePapers.Models.CGV_WebView
         }
     }
 
+    // 경품 현황 리스트
     public class CgvGiftListResponse
     {
         public int StatusCode { get; set; }
+        public string StatusMessage { get; set; }
         public CgvGiftListData Data { get; set; }
     }
     public class CgvGiftListData
     {
+        public int StartRow { get; set; }
+        public int ListCount { get; set; }
+        public int TotalCount { get; set; }
+
         public List<CgvGiftItem> List { get; set; }
     }
     public class CgvGiftItem
     {
-        public string SaprmEvntNo { get; set; }      // 경품 이벤트 ID (중요)
+        public string CoCd { get; set; }
+        public string ExhsYn { get; set; }           // 소진 여부
+        public string SaprmEvntNo { get; set; }      // 경품 이벤트 ID
         public string SaprmEvntNm { get; set; }      // 경품명
         public string EvntOnlnExpoNm { get; set; }
-        public string SaprmEvntImageUrl { get; set; } // 썸네일 URL
+        public string SaprmEvntImageUrl { get; set; }
         public string EvntStartYmd { get; set; }
         public string EvntEndYmd { get; set; }
     }
 
+    // 경품 수량 조회
     public class CgvGiftDetailResponse
     {
         public int StatusCode { get; set; }
@@ -119,6 +139,12 @@ namespace CinePapers.Models.CGV_WebView
     }
     public class CgvGiftStockData
     {
+        public string CoCd { get; set; }
+        public string SpmtlNo { get; set; }      // 경품 상세 번호
+        public string SiteNo { get; set; }       // 극장 코드
+        public string ExpoSiteNm { get; set; }   // 노출 극장명
+        public string RegnGrpCd { get; set; }    // 지역 그룹 코드
+        public int TotPayQty { get; set; }       // 전체 지급 수량
         public string SiteNm { get; set; }       // 극장명
         public string RegnGrpNm { get; set; }    // 지역명
         public int RlInvntQty { get; set; }      // 실재고 수량
@@ -126,19 +152,19 @@ namespace CinePapers.Models.CGV_WebView
         public string FcfsPayYn { get; set; }    // 선착순 여부
     }
 
+    // 경품 품목 조회
     public class CgvGiftProductResponse
     {
         public int StatusCode { get; set; }
         public string StatusMessage { get; set; }
         public List<CgvGiftProductItem> Data { get; set; }
     }
-
     public class CgvGiftProductItem
     {
         public string CoCd { get; set; }
-        public string SpmtlNo { get; set; }        // [중요] 경품 상세 번호 (예: 2025112407070404)
+        public string SpmtlNo { get; set; }
         public string SpmtlProdNm { get; set; }
-        public string OnlnExpoNm { get; set; }     // 경품명 (예: [국보] 메인 포스터)
+        public string OnlnExpoNm { get; set; }
         public string SpmtlDsc { get; set; }
     }
 }

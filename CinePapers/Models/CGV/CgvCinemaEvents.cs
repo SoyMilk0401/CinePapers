@@ -11,24 +11,22 @@ namespace CinePapers.Models.CGV
     }
     public class CgvData
     {
-        public int StartRow { get; set; }    // 현재 페이지 시작 인덱스 (0, 10, 20...)
-        public int ListCount { get; set; }   // 가져온 개수
-        public int TotalCount { get; set; }  // 전체 개수
-        public List<CgvEventItem> List { get; set; } // 이벤트 리스트
+        public int StartRow { get; set; }
+        public int ListCount { get; set; }
+        public int TotalCount { get; set; }
+        public List<CgvEventItem> List { get; set; }
     }
     public class CgvEventItem
     {
-        public string EvntNo { get; set; }        // 이벤트 ID (예: "202511214226")
+        public string EvntNo { get; set; }        // 이벤트 ID
         public string EvntNm { get; set; }        // 이벤트명
         public string EvntStartDt { get; set; }   // 시작일 (2025-11-26 00:00:00)
         public string EvntEndDt { get; set; }     // 종료일
-        public string EvntCtgryLclsCd { get; set; } // 카테고리 코드 ("01", "03" 등)
-        // 썸네일 (Medium Banner)
-        public string MduBanrPhyscFilePathnm { get; set; } // 경로 (예: "cgvpomscontent/ips/evnt/2025/1121")
-        public string MduBanrPhyscFnm { get; set; }        // 파일명 (예: "bfc0fd95...jpg")
-        // 상세/큰 이미지 (Large Banner)
+        public string EvntCtgryLclsCd { get; set; } // 카테고리 코드
+        public string MduBanrPhyscFilePathnm { get; set; } // 경로
+        public string MduBanrPhyscFnm { get; set; }        // 작은 배너 파일명
         public string LagBanrPhyscFilePathnm { get; set; }
-        public string LagBanrPhyscFnm { get; set; }
+        public string LagBanrPhyscFnm { get; set; } // 큰 배너 파일명
         public string ImageUrl
         {
             get
@@ -49,12 +47,12 @@ namespace CinePapers.Models.CGV
     }
     public class CgvEventDetailItem
     {
-        public string CoCd { get; set; }          // 회사 코드 (A420)
+        public string CoCd { get; set; }
         public string EvntNo { get; set; }        // 이벤트 번호
         public string EvntNm { get; set; }        // 이벤트 이름
         public string EvntStartDt { get; set; }   // 시작일
         public string EvntEndDt { get; set; }     // 종료일
-        public string EvntImfilePhyscFilePathnm { get; set; } // 상세 이미지 경로
+        public string EvntImfilePhyscFilePathnm { get; set; }
         public string EvntImfilePhyscFnm { get; set; }        // 상세 이미지 파일명
 
         public string DetailImageUrl
@@ -77,13 +75,13 @@ namespace CinePapers.Models.CGV
     }
     public class CgvSearchData
     {
-        public int TotalCnt { get; set; }       // 전체 검색 결과 수
-        public CgvSearchEvntInfo EvntInfo { get; set; } // 이벤트 검색 결과 그룹
+        public int TotalCnt { get; set; }
+        public CgvSearchEvntInfo EvntInfo { get; set; }
     }
     public class CgvSearchEvntInfo
     {
-        public int TotalCnt { get; set; }       // 검색된 이벤트 개수
-        public List<CgvSearchEventItem> EvntLst { get; set; } // 이벤트 리스트
+        public int TotalCnt { get; set; }
+        public List<CgvSearchEventItem> EvntLst { get; set; }
     }
     public class CgvSearchEventItem
     {
@@ -122,10 +120,10 @@ namespace CinePapers.Models.CGV
     public class CgvGiftItem
     {
         public string CoCd { get; set; }
-        public string SaprmEvntNo { get; set; }      // 경품 이벤트 번호 (이걸로 디테일 조회)
+        public string SaprmEvntNo { get; set; }      // 경품 이벤트 번호
         public string SaprmEvntNm { get; set; }      // 경품 이벤트 이름
         public string EvntOnlnExpoNm { get; set; }   // 온라인 노출명
-        public string SaprmEvntImageUrl { get; set; } // 이미지 URL (null인 경우가 많음)
+        public string SaprmEvntImageUrl { get; set; } // 이미지 URL
         public string ExhsYn { get; set; }           // 소진 여부 (Y/N)
         public string EvntStartYmd { get; set; }     // 시작일 (YYYYMMDD)
         public string EvntEndYmd { get; set; }       // 종료일
@@ -136,20 +134,20 @@ namespace CinePapers.Models.CGV
     {
         public int StatusCode { get; set; }
         public string StatusMessage { get; set; }
-        public List<CgvGiftDetailItem> Data { get; set; } // 리스트 형태로 바로 옴
+        public List<CgvGiftDetailItem> Data { get; set; }
     }
     public class CgvGiftDetailItem
     {
         public string CoCd { get; set; }
         public string SpmtlNo { get; set; }      // 경품 상세 번호
         public string SiteNo { get; set; }       // 극장 코드
-        public string SiteNm { get; set; }       // 극장명 (CGV 용산아이파크몰)
-        public string ExpoSiteNm { get; set; }   // 노출 극장명 (용산아이파크몰)
+        public string SiteNm { get; set; }       // 극장명
+        public string ExpoSiteNm { get; set; }   // 노출 극장명
         public string RegnGrpCd { get; set; }    // 지역 그룹 코드
-        public string RegnGrpNm { get; set; }    // 지역 그룹명 (서울, 경기 등)
+        public string RegnGrpNm { get; set; }    // 지역 그룹명
         public int SortOseq { get; set; }        // 정렬 순서
         public string FcfsPayYn { get; set; }    // 선착순 지급 여부
-        public int RlInvntQty { get; set; }      // [핵심] 실재고 수량 (남은 개수)
+        public int RlInvntQty { get; set; }      // 실재고 수량
         public int TotPayQty { get; set; }       // 전체 지급 수량
     }
 }

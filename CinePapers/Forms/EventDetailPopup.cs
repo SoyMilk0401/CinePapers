@@ -1,8 +1,8 @@
-﻿using System;
+﻿using CinePapers.Models.Common;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using CinePapers.Models.Common;
 
 namespace CinePapers.Forms
 {

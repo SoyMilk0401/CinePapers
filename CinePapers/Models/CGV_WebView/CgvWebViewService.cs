@@ -1,13 +1,13 @@
-﻿using System;
+﻿using CinePapers.Models.Common;
+using Microsoft.Web.WebView2.Core;
+using Microsoft.Web.WebView2.WinForms;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Web.WebView2.WinForms;
-using Microsoft.Web.WebView2.Core;
-using System.Text.Json;
-using CinePapers.Models.Common;
-using System.Diagnostics;
 
 namespace CinePapers.Models.CGV_WebView
 {

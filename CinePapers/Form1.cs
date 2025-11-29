@@ -1,12 +1,12 @@
-﻿using System;
-using System.Drawing;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CinePapers.Controls;
+﻿using CinePapers.Controls;
 using CinePapers.Forms;
 using CinePapers.Models.Common;
 using CinePapers.Services;
 using CinePapers.ViewModels;
+using System;
+using System.Drawing;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CinePapers
 {
@@ -126,7 +126,6 @@ namespace CinePapers
             if (isReload)
             {
                 flowLayoutPanel1.Controls.Clear();
-                // 탭 이동이나 검색 시 스크롤 위치 초기화
                 flowLayoutPanel1.AutoScrollPosition = new Point(0, 0);
             }
 
@@ -148,12 +147,10 @@ namespace CinePapers
             }
             else if (isReload)
             {
-                // [수정됨] 팝업 대신 패널 내부에 "데이터 없음" 라벨 추가
                 ShowNoDataMessage();
             }
         }
 
-        // [신규] 데이터 없음 메시지 출력 헬퍼 메서드
         private void ShowNoDataMessage()
         {
             Label lblNoData = new Label
@@ -161,11 +158,11 @@ namespace CinePapers
                 Text = "조회된 이벤트가 없습니다.",
                 ForeColor = Color.Gray,
                 Font = new Font("맑은 고딕", 12F, FontStyle.Bold),
-                AutoSize = false, // 너비를 수동으로 지정하기 위해 false 설정
-                Width = flowLayoutPanel1.ClientSize.Width - 10, // 패널 가로폭에 맞춤 (스크롤바 여유 고려)
-                Height = 100, // 적당한 높이
-                TextAlign = ContentAlignment.MiddleCenter, // 텍스트 가운데 정렬
-                Margin = new Padding(0, 50, 0, 0) // 위쪽 여백을 줘서 너무 붙지 않게 함
+                AutoSize = false,
+                Width = flowLayoutPanel1.ClientSize.Width - 10,
+                Height = 100,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Margin = new Padding(0, 50, 0, 0)
             };
 
             flowLayoutPanel1.Controls.Add(lblNoData);
