@@ -137,12 +137,33 @@ namespace CinePapers.Models.Lottee
 
             if (response?.CinemaDivisionGoods == null) return new List<CinemaStockItem>();
 
-            return response.CinemaDivisionGoods.Select(g => new CinemaStockItem
+            var regionSortMap = new Dictionary<string, int>();
+            if (response.CinemaDivisions != null)
             {
-                Region = g.DetailDivisionNameKR,
-                CinemaName = g.CinemaNameKR,
-                StockCount = g.Cnt,
-                SortOrder = g.SortSequence
+                foreach (var div in response.CinemaDivisions)
+                {
+                    if (!regionSortMap.ContainsKey(div.DetailDivisionCode))
+                    {
+                        regionSortMap.Add(div.DetailDivisionCode, div.SortSequence);
+                    }
+                }
+            }
+
+            return response.CinemaDivisionGoods.Select(g =>
+            {
+                int regionOrder = 999;
+                if (regionSortMap.TryGetValue(g.DetailDivisionCode, out int order))
+                {
+                    regionOrder = order;
+                }
+
+                return new CinemaStockItem
+                {
+                    Region = g.DetailDivisionNameKR,
+                    CinemaName = g.CinemaNameKR,
+                    StockCount = g.Cnt,
+                    SortOrder = (regionOrder * 1000) + g.SortSequence
+                };
             }).ToList();
         }
 

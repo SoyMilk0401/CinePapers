@@ -210,6 +210,10 @@ namespace CinePapers.Models.Mega
                                 {
                                     item.StockCount = 2;
                                 }
+                                else if (status.Contains("준비중"))
+                                {
+                                    item.StockCount = 3;
+                                }
                                 else
                                 {
                                     var match = Regex.Match(status, @"\d+");
@@ -247,6 +251,7 @@ namespace CinePapers.Models.Mega
             {
                 case 1: return "소량 보유";
                 case 2: return "보유";
+                case 3: return "준비중";
                 default: return "소진";
             }
         }
