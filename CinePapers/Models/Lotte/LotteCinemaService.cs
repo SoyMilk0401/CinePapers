@@ -177,5 +177,9 @@ namespace CinePapers.Models.Lottee
             else
                 return $"{stockCount}개 이상";
         }
+
+        public void Dispose()
+        {
+        }
     }
 }

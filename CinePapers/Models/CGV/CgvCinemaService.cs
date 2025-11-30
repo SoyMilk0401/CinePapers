@@ -1,6 +1,7 @@
 ﻿using CinePapers.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
@@ -110,6 +111,10 @@ namespace CinePapers.Models.CGV
         public string GetStockStatusText(int stockCount)
         {
             return $"{stockCount}개";
+        }
+
+        public void Dispose()
+        {
         }
     }
 }

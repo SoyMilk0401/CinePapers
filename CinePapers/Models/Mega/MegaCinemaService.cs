@@ -255,5 +255,9 @@ namespace CinePapers.Models.Mega
                 default: return "소진";
             }
         }
+
+        public void Dispose()
+        {
+        }
     }
 }

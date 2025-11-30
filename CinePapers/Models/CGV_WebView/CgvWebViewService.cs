@@ -421,5 +421,23 @@ namespace CinePapers.Models.CGV_WebView
         }
 
         public string GetStockStatusText(int stockCount) => $"{stockCount}개";
+
+        public void Dispose()
+        {
+            if (_webView != null)
+            {
+                _webView.Dispose();
+                _webView = null;
+            }
+            if (_hostingForm != null)
+            {
+                if (!_hostingForm.IsDisposed)
+                {
+                    _hostingForm.Close();
+                    _hostingForm.Dispose();
+                }
+                _hostingForm = null;
+            }
+        }
     }
 }

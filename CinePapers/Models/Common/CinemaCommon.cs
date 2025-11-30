@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CinePapers.Models.Common
@@ -33,7 +34,7 @@ namespace CinePapers.Models.Common
         public int SortOrder { get; set; }      // 정렬 순서
     }
 
-    public interface ICinemaService
+    public interface ICinemaService : IDisposable
     {
         string CinemaName { get; } // CGV, 롯데시네마, 메가박스
         Dictionary<string, string> GetCategories(); // 카데고리 목록
