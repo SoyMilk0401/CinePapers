@@ -18,3 +18,10 @@
 
       * 이벤트 클릭 시 상세 팝업을 통해 고화질 이벤트 이미지를 확인할 수 있습니다.
       * WebView나 브라우저를 띄우지 않고 이미지를 직접 파싱 하여 보여줍니다.
+    <br/>
+
+##  **스크린샷**
+##### 메인 화면
+![캡처](https://github.com/SoyMilk0401/CinePapers/blob/main/CinePapers/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7/CinePapers%20cgv%20%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7.png)
+##### 이벤트 상세 페이지
+![캡처](https://github.com/SoyMilk0401/CinePapers/blob/main/CinePapers/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7/CinePapers%20%EB%94%94%ED%85%8C%EC%9D%BC%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7.png)
