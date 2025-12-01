@@ -1,3 +1,9 @@
 <Solution>
-  <Project Path="CinePapers/CinePapers.csproj" Id="e6f17c81-0788-4d79-b144-a38e3fbc1476" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="CinePapers/CinePapers.csproj" Id="e6f17c81-0788-4d79-b144-a38e3fbc1476">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>
